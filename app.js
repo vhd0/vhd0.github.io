@@ -20,9 +20,57 @@
 
   const viewer = document.getElementById("viewer");
   const viewerBack = document.getElementById("viewer-back");
+  const viewerClose = document.getElementById("viewer-close");
   const viewerPath = document.getElementById("viewer-path");
   const viewerRaw = document.getElementById("viewer-raw");
   const viewerBody = document.getElementById("viewer-body");
+
+  const tokenBtn = document.getElementById("token-btn");
+  const tokenModal = document.getElementById("token-modal");
+  const tokenClose = document.getElementById("token-close");
+  const tokenInput = document.getElementById("token-input");
+  const tokenSave = document.getElementById("token-save");
+  const tokenClear = document.getElementById("token-clear");
+
+  const TOKEN_KEY = "vhd0_gh_token";
+
+  function getToken() {
+    try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; }
+  }
+  function apiHeaders() {
+    const t = getToken();
+    const h = { Accept: "application/vnd.github.v3+json" };
+    if (t) h.Authorization = "Bearer " + t;
+    return h;
+  }
+  function refreshTokenBtn() {
+    tokenBtn.classList.toggle("is-set", !!getToken());
+  }
+  function openTokenModal() {
+    tokenInput.value = getToken();
+    tokenModal.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function closeTokenModal() {
+    tokenModal.hidden = true;
+    document.body.style.overflow = "";
+  }
+  tokenBtn.addEventListener("click", openTokenModal);
+  tokenClose.addEventListener("click", closeTokenModal);
+  tokenModal.addEventListener("click", e => { if (e.target === tokenModal) closeTokenModal(); });
+  tokenSave.addEventListener("click", () => {
+    const v = tokenInput.value.trim();
+    try { if (v) localStorage.setItem(TOKEN_KEY, v); else localStorage.removeItem(TOKEN_KEY); } catch (e) {}
+    refreshTokenBtn();
+    location.reload();
+  });
+  tokenClear.addEventListener("click", () => {
+    try { localStorage.removeItem(TOKEN_KEY); } catch (e) {}
+    tokenInput.value = "";
+    refreshTokenBtn();
+    location.reload();
+  });
+  refreshTokenBtn();
 
   let root = null;
   let currentPath = "";
@@ -325,24 +373,32 @@
 
     // 1) thử qua GitHub Contents API (trả base64, ổn định, không bị chặn CORS)
     try {
-      const res = await fetch(contentsUrl, { headers: { Accept: "application/vnd.github.v3+json" } });
+      const res = await fetch(contentsUrl, { headers: apiHeaders() });
       if (res.ok) {
         const data = await res.json();
-        if (data && data.content && data.encoding === "base64") {
+        if (data && typeof data.content === "string" && data.encoding === "base64") {
           if (isImg) {
             viewerBody.innerHTML = "";
             const img = document.createElement("img");
             img.className = "img-preview";
             img.src = `data:${mimeFor(ext)};base64,${data.content.replace(/\n/g, "")}`;
             viewerBody.appendChild(img);
+            return;
+          }
+          const text = data.content.replace(/\n/g, "").length === 0 ? "" : b64ToUtf8(data.content);
+          if (text.trim() === "") {
+            viewerBody.innerHTML = `<p class="empty-note">(file này hiện đang trống — chưa có nội dung)</p>`;
           } else {
-            renderTextContent(item, ext, b64ToUtf8(data.content));
+            renderTextContent(item, ext, text);
           }
           return;
         }
         // file quá lớn cho Contents API (không có content) → rơi xuống fallback bên dưới
       } else if (res.status === 404) {
-        renderErrorState(item, "GitHub báo không tìm thấy file này (404). Có thể đường dẫn chứa ký tự đặc biệt hoặc file chưa được đẩy lên nhánh " + BRANCH + ".");
+        renderErrorState(item, "GitHub báo không tìm thấy file này (404). Có thể file chưa được đẩy lên nhánh " + BRANCH + ", hoặc nếu repo ở chế độ private, cần thiết lập token ở nút ⚿ trên thanh công cụ.");
+        return;
+      } else if (res.status === 401 || res.status === 403) {
+        renderErrorState(item, "GitHub từ chối truy cập (mã " + res.status + "). Nếu bạn vừa nhập token, kiểm tra lại token còn hiệu lực và có quyền đọc repo này ở nút ⚿.");
         return;
       }
     } catch (e) {
@@ -363,7 +419,11 @@
       const res = await fetch(rawUrl);
       if (!res.ok) throw new Error("HTTP " + res.status);
       const text = await res.text();
-      renderTextContent(item, ext, text);
+      if (text.trim() === "") {
+        viewerBody.innerHTML = `<p class="empty-note">(file này hiện đang trống — chưa có nội dung)</p>`;
+      } else {
+        renderTextContent(item, ext, text);
+      }
     } catch (err) {
       renderErrorState(item, "Chi tiết lỗi: " + err.message + ". Có thể do giới hạn tốc độ của GitHub API — thử lại sau ít phút, hoặc mở bản gốc bên trên.");
     }
@@ -374,8 +434,14 @@
     document.body.style.overflow = "";
   }
   viewerBack.addEventListener("click", closeViewer);
+  viewerClose.addEventListener("click", closeViewer);
   viewer.addEventListener("click", e => { if (e.target === viewer) closeViewer(); });
-  document.addEventListener("keydown", e => { if (e.key === "Escape" && !viewer.hidden) closeViewer(); });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      if (!viewer.hidden) closeViewer();
+      if (!tokenModal.hidden) closeTokenModal();
+    }
+  });
 
   function renderMarkdown(md) {
     let html = md.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -409,8 +475,13 @@
   async function init() {
     mainEl.innerHTML = `<div class="status-line"><span class="cursor-dot"></span> đang mở kho lưu trữ…</div>`;
     try {
-      const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`);
-      if (!res.ok) throw new Error("HTTP " + res.status);
+      const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`, { headers: apiHeaders() });
+      if (!res.ok) {
+        if (res.status === 401 || res.status === 403) {
+          throw new Error("Từ chối truy cập (mã " + res.status + "). Nếu repo là private, nhập token ở nút ⚿ trên thanh công cụ.");
+        }
+        throw new Error("HTTP " + res.status);
+      }
       const data = await res.json();
       root = buildTree(data.tree || []);
       const totals = countAll(root);
