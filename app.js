@@ -284,7 +284,31 @@
     return html;
   }
 
-  function fileViewShell(item, rawUrl) {
+  function copyToClipboard(btn, text) {
+    const original = btn.textContent;
+    const done = ok => {
+      btn.textContent = ok ? "✓ đã sao chép" : "✕ lỗi sao chép";
+      btn.disabled = true;
+      setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 1400);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => done(true)).catch(() => done(false));
+    } else {
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        done(true);
+      } catch (e) { done(false); }
+    }
+  }
+
+  function fileViewShell(item, urls) {
     mainEl.innerHTML = "";
     const wrap = document.createElement("div");
     wrap.className = "file-view";
@@ -294,22 +318,50 @@
     head.innerHTML = `
       <a id="back-link" href="javascript:void(0)">⬅ quay lại</a>
       <span class="file-head-name"></span>
-      <a href="${rawUrl}" target="_blank" rel="noopener">bản gốc ↗</a>
     `;
     head.querySelector(".file-head-name").textContent = item.name;
     head.querySelector("#back-link").addEventListener("click", () => {
       if (searchQuery) showSearch(searchQuery); else showFolder(currentPath);
     });
 
+    const actions = document.createElement("div");
+    actions.className = "file-actions";
+
+    const linkBtn = document.createElement("button");
+    linkBtn.className = "action-btn";
+    linkBtn.textContent = "🔗 Hyperlink";
+    linkBtn.title = urls.pages;
+    linkBtn.addEventListener("click", () => copyToClipboard(linkBtn, urls.pages));
+
+    const copyBtn = document.createElement("button");
+    copyBtn.className = "action-btn";
+    copyBtn.textContent = "📋 Copy";
+    copyBtn.disabled = true; // bật lại khi nội dung tải xong
+
+    const rawBtn = document.createElement("button");
+    rawBtn.className = "action-btn";
+    rawBtn.textContent = "⬇ Raw";
+    rawBtn.title = urls.raw;
+    rawBtn.addEventListener("click", () => copyToClipboard(rawBtn, urls.raw));
+
+    const cdnBtn = document.createElement("button");
+    cdnBtn.className = "action-btn";
+    cdnBtn.textContent = "☁ CDN";
+    cdnBtn.title = urls.cdn;
+    cdnBtn.addEventListener("click", () => copyToClipboard(cdnBtn, urls.cdn));
+
+    actions.append(linkBtn, copyBtn, rawBtn, cdnBtn);
+
     const body = document.createElement("div");
     body.className = "file-body";
     body.innerHTML = `<p class="status-note">đang tải nội dung…</p>`;
 
     wrap.appendChild(head);
+    wrap.appendChild(actions);
     wrap.appendChild(body);
     mainEl.appendChild(wrap);
     pathEl.textContent = "/" + item.path;
-    return body;
+    return { body, copyBtn };
   }
 
   function showError(body, item, message) {
@@ -327,7 +379,9 @@
     const encPath = encodePath(item.path);
     const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${encPath}`;
     const contentsUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encPath}?ref=${BRANCH}`;
-    const body = fileViewShell(item, rawUrl);
+    const pagesUrl = `https://${OWNER}.github.io/${encPath}`;
+    const cdnUrl = `https://cdn.jsdelivr.net/gh/${OWNER}/${REPO}@${BRANCH}/${encPath}`;
+    const { body, copyBtn } = fileViewShell(item, { pages: pagesUrl, raw: rawUrl, cdn: cdnUrl });
     const isImg = IMG_EXT.includes(ext) && ext !== "svg";
 
     // 1) GitHub Contents API (ổn định, trả base64)
@@ -345,7 +399,7 @@
             return;
           }
           const text = data.content.replace(/\n/g, "").length === 0 ? "" : b64ToUtf8(data.content);
-          renderInto(body, item, ext, text);
+          renderInto(body, item, ext, text, copyBtn);
           return;
         }
       } else if (res.status === 404) {
@@ -368,16 +422,20 @@
       const res = await fetch(rawUrl);
       if (!res.ok) throw new Error("HTTP " + res.status);
       const text = await res.text();
-      renderInto(body, item, ext, text);
+      renderInto(body, item, ext, text, copyBtn);
     } catch (err) {
       showError(body, item, "Chi tiết: " + err.message + ". Có thể do giới hạn tốc độ GitHub API — thử lại sau ít phút.");
     }
   }
 
-  function renderInto(body, item, ext, text) {
+  function renderInto(body, item, ext, text, copyBtn) {
     if (text.trim() === "") {
       body.innerHTML = `<p class="status-note">(file này hiện đang trống — chưa có nội dung)</p>`;
       return;
+    }
+    if (copyBtn) {
+      copyBtn.disabled = false;
+      copyBtn.addEventListener("click", () => copyToClipboard(copyBtn, text));
     }
     if (ext === "svg") {
       body.innerHTML = `<div>${text}</div>`;

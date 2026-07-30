@@ -181,6 +181,28 @@ a{ color: var(--accent); }
 .file-head a{ font-size:12px; text-decoration:none; flex-shrink:0; }
 .file-head a:hover{ text-decoration:underline; }
 
+.file-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+  padding: 8px 0.9rem;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+.action-btn{
+  font-family: inherit;
+  font-size: 12px;
+  padding: 5px 11px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.action-btn:hover:not(:disabled){ border-color: var(--accent); color: var(--accent); }
+.action-btn:disabled{ opacity: 0.45; cursor: default; }
+
 .file-body{ padding: 1rem 0.9rem 2rem; }
 .file-pre{
   white-space: pre-wrap;
