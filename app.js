@@ -3,7 +3,7 @@
   const REPO = "vhd0.github.io";
   const BRANCH = "main";
 
-  // Các file/thư mục dùng để dựng trang — không hiển thị trong kho lưu trữ
+  // File/thư mục dùng để dựng trang — không hiển thị trong danh sách
   const EXCLUDE_NAMES = new Set([
     "index.html", "style.css", "app.js", "readme.md",
     ".nojekyll", ".gitignore", "license", "license.md",
@@ -14,68 +14,13 @@
   const MD_EXT = ["md", "markdown"];
 
   const mainEl = document.getElementById("main");
-  const breadcrumbEl = document.getElementById("breadcrumb");
+  const pathEl = document.getElementById("path");
   const searchEl = document.getElementById("search");
-  const itemTotalEl = document.getElementById("item-total");
-
-  const viewer = document.getElementById("viewer");
-  const viewerBack = document.getElementById("viewer-back");
-  const viewerClose = document.getElementById("viewer-close");
-  const viewerPath = document.getElementById("viewer-path");
-  const viewerRaw = document.getElementById("viewer-raw");
-  const viewerBody = document.getElementById("viewer-body");
-
-  const tokenBtn = document.getElementById("token-btn");
-  const tokenModal = document.getElementById("token-modal");
-  const tokenClose = document.getElementById("token-close");
-  const tokenInput = document.getElementById("token-input");
-  const tokenSave = document.getElementById("token-save");
-  const tokenClear = document.getElementById("token-clear");
-
-  const TOKEN_KEY = "vhd0_gh_token";
-
-  function getToken() {
-    try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; }
-  }
-  function apiHeaders() {
-    const t = getToken();
-    const h = { Accept: "application/vnd.github.v3+json" };
-    if (t) h.Authorization = "Bearer " + t;
-    return h;
-  }
-  function refreshTokenBtn() {
-    tokenBtn.classList.toggle("is-set", !!getToken());
-  }
-  function openTokenModal() {
-    tokenInput.value = getToken();
-    tokenModal.hidden = false;
-    document.body.style.overflow = "hidden";
-  }
-  function closeTokenModal() {
-    tokenModal.hidden = true;
-    document.body.style.overflow = "";
-  }
-  tokenBtn.addEventListener("click", openTokenModal);
-  tokenClose.addEventListener("click", closeTokenModal);
-  tokenModal.addEventListener("click", e => { if (e.target === tokenModal) closeTokenModal(); });
-  tokenSave.addEventListener("click", () => {
-    const v = tokenInput.value.trim();
-    try { if (v) localStorage.setItem(TOKEN_KEY, v); else localStorage.removeItem(TOKEN_KEY); } catch (e) {}
-    refreshTokenBtn();
-    location.reload();
-  });
-  tokenClear.addEventListener("click", () => {
-    try { localStorage.removeItem(TOKEN_KEY); } catch (e) {}
-    tokenInput.value = "";
-    refreshTokenBtn();
-    location.reload();
-  });
-  refreshTokenBtn();
+  const countEl = document.getElementById("count");
 
   let root = null;
-  let currentPath = "";
-  let catalogCounter = 0;
-  const catalogIds = new Map();
+  let currentPath = "";   // thư mục đang xem
+  let searchQuery = "";
 
   function extOf(name) {
     const i = name.lastIndexOf(".");
@@ -89,25 +34,16 @@
     return (bytes / (1024 * 1024)).toFixed(1) + " MB";
   }
 
-  function glyphFor(item) {
-    if (item.type === "dir") return "▤";
+  function iconFor(item) {
+    if (item.type === "dir") return "📁";
     const ext = extOf(item.name);
-    if (IMG_EXT.includes(ext)) return "◫";
-    if (MD_EXT.includes(ext)) return "≡";
-    if (["html", "htm"].includes(ext)) return "◆";
-    if (["css"].includes(ext)) return "◇";
-    if (["js", "mjs", "ts"].includes(ext)) return "ƒ";
-    if (["json", "yml", "yaml"].includes(ext)) return "{ }";
-    if (["pdf"].includes(ext)) return "▦";
-    return "·";
-  }
-
-  function catalogId(path) {
-    if (!catalogIds.has(path)) {
-      catalogCounter += 1;
-      catalogIds.set(path, String(catalogCounter).padStart(3, "0"));
-    }
-    return catalogIds.get(path);
+    if (IMG_EXT.includes(ext)) return "🖼";
+    if (MD_EXT.includes(ext)) return "📝";
+    if (["html", "htm"].includes(ext)) return "🌐";
+    if (["json", "yml", "yaml"].includes(ext)) return "🔧";
+    if (["zip", "rar", "7z"].includes(ext)) return "🗜";
+    if (["pdf"].includes(ext)) return "📕";
+    return "📄";
   }
 
   // ---------- build filtered nested tree ----------
@@ -161,6 +97,13 @@
     return cur;
   }
 
+  function parentOf(path) {
+    if (!path) return "";
+    const parts = path.split("/");
+    parts.pop();
+    return parts.join("/");
+  }
+
   function sortEntries(children) {
     return Object.values(children).sort((a, b) => {
       if (a.type !== b.type) return a.type === "dir" ? -1 : 1;
@@ -180,142 +123,134 @@
     return { files, dirs };
   }
 
-  // ---------- rendering ----------
-  function renderBreadcrumb(path) {
-    breadcrumbEl.innerHTML = "";
-    const rootBtn = document.createElement("button");
-    rootBtn.className = "crumb crumb-root" + (path === "" ? " current" : "");
-    rootBtn.textContent = "Gốc";
-    rootBtn.dataset.path = "";
-    rootBtn.addEventListener("click", () => navigate(""));
-    breadcrumbEl.appendChild(rootBtn);
-
-    if (!path) return;
-    const parts = path.split("/");
-    let acc = "";
-    parts.forEach((part, idx) => {
-      acc = acc ? acc + "/" + part : part;
-      const sep = document.createElement("span");
-      sep.className = "crumb-sep";
-      sep.textContent = "/";
-      breadcrumbEl.appendChild(sep);
-
-      const btn = document.createElement("button");
-      btn.className = "crumb" + (idx === parts.length - 1 ? " current" : "");
-      btn.textContent = part;
-      const p = acc;
-      btn.addEventListener("click", () => navigate(p));
-      breadcrumbEl.appendChild(btn);
-    });
+  // ---------- row builder ----------
+  function makeRow({ icon, cls, name, meta, onClick }) {
+    const row = document.createElement("button");
+    row.className = "row " + cls;
+    row.innerHTML = `
+      <span class="row-icon">${icon}</span>
+      <span class="row-name"></span>
+      <span class="row-meta"></span>
+    `;
+    row.querySelector(".row-name").textContent = name;
+    row.querySelector(".row-meta").textContent = meta || "";
+    row.addEventListener("click", onClick);
+    return row;
   }
 
-  function renderGrid(node) {
-    mainEl.innerHTML = "";
-    const entries = sortEntries(node.children);
+  // ---------- views ----------
+  function renderPath() {
+    pathEl.textContent = "/" + currentPath;
+  }
 
-    if (entries.length === 0) {
-      mainEl.innerHTML = `<p class="empty-note">Thư mục này trống.</p>`;
-      return;
+  function showFolder(path) {
+    currentPath = path;
+    searchQuery = "";
+    searchEl.value = "";
+    renderPath();
+
+    const node = findNode(path);
+    mainEl.innerHTML = "";
+    const list = document.createElement("div");
+    list.className = "list";
+
+    if (path) {
+      list.appendChild(makeRow({
+        icon: "⬅",
+        cls: "up",
+        name: "..",
+        meta: "",
+        onClick: () => showFolder(parentOf(path))
+      }));
     }
 
-    const grid = document.createElement("div");
-    grid.className = "grid";
+    const entries = node ? sortEntries(node.children) : [];
+    if (entries.length === 0 && !path) {
+      list.appendChild(rowless("Kho lưu trữ đang trống."));
+    } else if (entries.length === 0) {
+      list.appendChild(rowless("Thư mục này trống."));
+    }
 
     entries.forEach(item => {
-      const card = document.createElement("button");
-      card.className = "card " + (item.type === "dir" ? "card-folder" : "card-file");
-
-      const top = document.createElement("div");
-      top.className = "card-top";
-      const glyph = document.createElement("span");
-      glyph.className = "card-glyph";
-      glyph.textContent = glyphFor(item);
-      const id = document.createElement("span");
-      id.className = "card-id";
-      id.textContent = "№ " + catalogId(item.path);
-      top.appendChild(glyph);
-      top.appendChild(id);
-
-      const name = document.createElement("div");
-      name.className = "card-name";
-      name.textContent = item.name;
-
-      const meta = document.createElement("div");
-      meta.className = "card-meta";
       if (item.type === "dir") {
         const c = countAll(item);
-        meta.innerHTML = `<span>thư mục</span><span>${c.files} tệp</span>`;
+        list.appendChild(makeRow({
+          icon: "📁",
+          cls: "dir",
+          name: item.name + "/",
+          meta: c.files + " tệp",
+          onClick: () => showFolder(item.path)
+        }));
       } else {
-        meta.innerHTML = `<span>${extOf(item.name) || "tệp"}</span><span>${humanSize(item.size)}</span>`;
+        list.appendChild(makeRow({
+          icon: iconFor(item),
+          cls: "file",
+          name: item.name,
+          meta: humanSize(item.size),
+          onClick: () => showFile(item)
+        }));
       }
-
-      card.appendChild(top);
-      card.appendChild(name);
-      card.appendChild(meta);
-
-      card.addEventListener("click", () => {
-        if (item.type === "dir") navigate(item.path);
-        else openFile(item);
-      });
-
-      grid.appendChild(card);
     });
 
-    mainEl.appendChild(grid);
+    mainEl.appendChild(list);
+    countEl.textContent = countLabel();
   }
 
-  function renderSearchResults(query) {
-    mainEl.innerHTML = "";
+  function rowless(text) {
+    const p = document.createElement("p");
+    p.className = "empty-note";
+    p.textContent = text;
+    return p;
+  }
+
+  function countLabel() {
+    if (!root) return "";
+    const t = countAll(root);
+    return `${t.files} tệp · ${t.dirs} thư mục`;
+  }
+
+  function showSearch(query) {
+    searchQuery = query;
+    pathEl.textContent = `tìm kiếm: "${query}"`;
     const q = query.toLowerCase();
     const matches = [];
     const walk = n => {
       Object.values(n.children).forEach(c => {
-        if (c.name.toLowerCase().includes(q) || c.path.toLowerCase().includes(q)) matches.push(c);
+        if (c.name.toLowerCase().includes(q)) matches.push(c);
         if (c.type === "dir") walk(c);
       });
     };
     walk(root);
 
-    const label = document.createElement("p");
-    label.className = "section-label";
-    label.textContent = `Kết quả tìm kiếm — "${query}" (${matches.length})`;
-    mainEl.appendChild(label);
+    mainEl.innerHTML = "";
+    const list = document.createElement("div");
+    list.className = "list";
+    list.appendChild(makeRow({
+      icon: "⬅",
+      cls: "up",
+      name: "..",
+      meta: "",
+      onClick: () => showFolder(currentPath)
+    }));
 
     if (matches.length === 0) {
-      mainEl.innerHTML += `<p class="empty-note">Không tìm thấy mục nào khớp.</p>`;
-      return;
-    }
-
-    const grid = document.createElement("div");
-    grid.className = "grid";
-    matches.forEach(item => {
-      const card = document.createElement("button");
-      card.className = "card " + (item.type === "dir" ? "card-folder" : "card-file");
-      card.innerHTML = `
-        <div class="card-top">
-          <span class="card-glyph">${glyphFor(item)}</span>
-          <span class="card-id">№ ${catalogId(item.path)}</span>
-        </div>
-        <div class="card-name">${item.name}</div>
-        <div class="card-meta"><span>${item.path}</span></div>
-      `;
-      card.addEventListener("click", () => {
-        if (item.type === "dir") { searchEl.value = ""; navigate(item.path); }
-        else openFile(item);
+      list.appendChild(rowless(`Không tìm thấy mục nào khớp với "${query}".`));
+    } else {
+      matches.forEach(item => {
+        list.appendChild(makeRow({
+          icon: item.type === "dir" ? "📁" : iconFor(item),
+          cls: item.type === "dir" ? "dir" : "file",
+          name: item.path,
+          meta: item.type === "dir" ? "" : humanSize(item.size),
+          onClick: () => item.type === "dir" ? showFolder(item.path) : showFile(item)
+        }));
       });
-      grid.appendChild(card);
-    });
-    mainEl.appendChild(grid);
+    }
+    mainEl.appendChild(list);
+    countEl.textContent = `${matches.length} kết quả`;
   }
 
-  function navigate(path) {
-    currentPath = path;
-    const node = findNode(path);
-    renderBreadcrumb(path);
-    if (node) renderGrid(node);
-  }
-
-  // ---------- file viewer ----------
+  // ---------- file content ----------
   function encodePath(path) {
     return path.split("/").map(encodeURIComponent).join("/");
   }
@@ -331,117 +266,6 @@
     const map = { png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", gif: "image/gif", webp: "image/webp", ico: "image/x-icon" };
     return map[ext] || "application/octet-stream";
   }
-
-  function renderTextContent(item, ext, text) {
-    if (ext === "svg") {
-      viewerBody.innerHTML = `<div>${text}</div>`;
-    } else if (MD_EXT.includes(ext)) {
-      viewerBody.innerHTML = `<div class="md">${renderMarkdown(text)}</div>`;
-    } else {
-      const pre = document.createElement("pre");
-      pre.className = "file-pre";
-      pre.textContent = text.length > 200000
-        ? text.slice(0, 200000) + "\n\n… (đã cắt bớt, mở bản gốc để xem đầy đủ)"
-        : text;
-      viewerBody.innerHTML = "";
-      viewerBody.appendChild(pre);
-    }
-  }
-
-  function renderErrorState(item, message) {
-    viewerBody.innerHTML = `
-      <p class="err">Không thể tải nội dung file này.</p>
-      <p class="empty-note" style="text-align:left; padding-top:0;">${message}</p>
-      <button id="retry-file" class="viewer-back" style="margin-top:10px;">↻ thử lại</button>
-    `;
-    document.getElementById("retry-file").addEventListener("click", () => openFile(item));
-  }
-
-  async function openFile(item) {
-    const ext = extOf(item.name);
-    const encPath = encodePath(item.path);
-    const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${encPath}`;
-    const contentsUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encPath}?ref=${BRANCH}`;
-
-    viewerPath.textContent = "/" + item.path;
-    viewerRaw.href = rawUrl;
-    viewerBody.innerHTML = `<p class="empty-note"><span class="cursor-dot" style="display:inline-block;margin-right:6px;"></span>đang tải nội dung…</p>`;
-    viewer.hidden = false;
-    document.body.style.overflow = "hidden";
-
-    const isImg = IMG_EXT.includes(ext) && ext !== "svg";
-
-    // 1) thử qua GitHub Contents API (trả base64, ổn định, không bị chặn CORS)
-    try {
-      const res = await fetch(contentsUrl, { headers: apiHeaders() });
-      if (res.ok) {
-        const data = await res.json();
-        if (data && typeof data.content === "string" && data.encoding === "base64") {
-          if (isImg) {
-            viewerBody.innerHTML = "";
-            const img = document.createElement("img");
-            img.className = "img-preview";
-            img.src = `data:${mimeFor(ext)};base64,${data.content.replace(/\n/g, "")}`;
-            viewerBody.appendChild(img);
-            return;
-          }
-          const text = data.content.replace(/\n/g, "").length === 0 ? "" : b64ToUtf8(data.content);
-          if (text.trim() === "") {
-            viewerBody.innerHTML = `<p class="empty-note">(file này hiện đang trống — chưa có nội dung)</p>`;
-          } else {
-            renderTextContent(item, ext, text);
-          }
-          return;
-        }
-        // file quá lớn cho Contents API (không có content) → rơi xuống fallback bên dưới
-      } else if (res.status === 404) {
-        renderErrorState(item, "GitHub báo không tìm thấy file này (404). Có thể file chưa được đẩy lên nhánh " + BRANCH + ", hoặc nếu repo ở chế độ private, cần thiết lập token ở nút ⚿ trên thanh công cụ.");
-        return;
-      } else if (res.status === 401 || res.status === 403) {
-        renderErrorState(item, "GitHub từ chối truy cập (mã " + res.status + "). Nếu bạn vừa nhập token, kiểm tra lại token còn hiệu lực và có quyền đọc repo này ở nút ⚿.");
-        return;
-      }
-    } catch (e) {
-      // im lặng, thử fallback tiếp theo
-    }
-
-    // 2) fallback: raw.githubusercontent trực tiếp
-    try {
-      if (isImg) {
-        viewerBody.innerHTML = "";
-        const img = document.createElement("img");
-        img.className = "img-preview";
-        img.onerror = () => renderErrorState(item, "Không kết nối được tới raw.githubusercontent.com — kiểm tra kết nối mạng hoặc thử mở bản gốc.");
-        img.src = rawUrl;
-        viewerBody.appendChild(img);
-        return;
-      }
-      const res = await fetch(rawUrl);
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const text = await res.text();
-      if (text.trim() === "") {
-        viewerBody.innerHTML = `<p class="empty-note">(file này hiện đang trống — chưa có nội dung)</p>`;
-      } else {
-        renderTextContent(item, ext, text);
-      }
-    } catch (err) {
-      renderErrorState(item, "Chi tiết lỗi: " + err.message + ". Có thể do giới hạn tốc độ của GitHub API — thử lại sau ít phút, hoặc mở bản gốc bên trên.");
-    }
-  }
-
-  function closeViewer() {
-    viewer.hidden = true;
-    document.body.style.overflow = "";
-  }
-  viewerBack.addEventListener("click", closeViewer);
-  viewerClose.addEventListener("click", closeViewer);
-  viewer.addEventListener("click", e => { if (e.target === viewer) closeViewer(); });
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
-      if (!viewer.hidden) closeViewer();
-      if (!tokenModal.hidden) closeTokenModal();
-    }
-  });
 
   function renderMarkdown(md) {
     let html = md.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -460,38 +284,142 @@
     return html;
   }
 
+  function fileViewShell(item, rawUrl) {
+    mainEl.innerHTML = "";
+    const wrap = document.createElement("div");
+    wrap.className = "file-view";
+
+    const head = document.createElement("div");
+    head.className = "file-head";
+    head.innerHTML = `
+      <a id="back-link" href="javascript:void(0)">⬅ quay lại</a>
+      <span class="file-head-name"></span>
+      <a href="${rawUrl}" target="_blank" rel="noopener">bản gốc ↗</a>
+    `;
+    head.querySelector(".file-head-name").textContent = item.name;
+    head.querySelector("#back-link").addEventListener("click", () => {
+      if (searchQuery) showSearch(searchQuery); else showFolder(currentPath);
+    });
+
+    const body = document.createElement("div");
+    body.className = "file-body";
+    body.innerHTML = `<p class="status-note">đang tải nội dung…</p>`;
+
+    wrap.appendChild(head);
+    wrap.appendChild(body);
+    mainEl.appendChild(wrap);
+    pathEl.textContent = "/" + item.path;
+    return body;
+  }
+
+  function showError(body, item, message) {
+    body.innerHTML = `
+      <div class="err-note">
+        Không thể tải nội dung file này.<br>${message}
+        <div><button id="retry-btn">↻ thử lại</button></div>
+      </div>
+    `;
+    document.getElementById("retry-btn").addEventListener("click", () => showFile(item));
+  }
+
+  async function showFile(item) {
+    const ext = extOf(item.name);
+    const encPath = encodePath(item.path);
+    const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${encPath}`;
+    const contentsUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encPath}?ref=${BRANCH}`;
+    const body = fileViewShell(item, rawUrl);
+    const isImg = IMG_EXT.includes(ext) && ext !== "svg";
+
+    // 1) GitHub Contents API (ổn định, trả base64)
+    try {
+      const res = await fetch(contentsUrl, { headers: { Accept: "application/vnd.github.v3+json" } });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && typeof data.content === "string" && data.encoding === "base64") {
+          if (isImg) {
+            body.innerHTML = "";
+            const img = document.createElement("img");
+            img.className = "img-preview";
+            img.src = `data:${mimeFor(ext)};base64,${data.content.replace(/\n/g, "")}`;
+            body.appendChild(img);
+            return;
+          }
+          const text = data.content.replace(/\n/g, "").length === 0 ? "" : b64ToUtf8(data.content);
+          renderInto(body, item, ext, text);
+          return;
+        }
+      } else if (res.status === 404) {
+        showError(body, item, "GitHub báo không tìm thấy file (404). Kiểm tra file đã được đẩy lên nhánh " + BRANCH + " chưa.");
+        return;
+      }
+    } catch (e) { /* thử fallback */ }
+
+    // 2) fallback: raw.githubusercontent
+    try {
+      if (isImg) {
+        body.innerHTML = "";
+        const img = document.createElement("img");
+        img.className = "img-preview";
+        img.onerror = () => showError(body, item, "Không kết nối được tới raw.githubusercontent.com.");
+        img.src = rawUrl;
+        body.appendChild(img);
+        return;
+      }
+      const res = await fetch(rawUrl);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const text = await res.text();
+      renderInto(body, item, ext, text);
+    } catch (err) {
+      showError(body, item, "Chi tiết: " + err.message + ". Có thể do giới hạn tốc độ GitHub API — thử lại sau ít phút.");
+    }
+  }
+
+  function renderInto(body, item, ext, text) {
+    if (text.trim() === "") {
+      body.innerHTML = `<p class="status-note">(file này hiện đang trống — chưa có nội dung)</p>`;
+      return;
+    }
+    if (ext === "svg") {
+      body.innerHTML = `<div>${text}</div>`;
+    } else if (MD_EXT.includes(ext)) {
+      body.innerHTML = `<div class="md">${renderMarkdown(text)}</div>`;
+    } else {
+      const pre = document.createElement("pre");
+      pre.className = "file-pre";
+      pre.textContent = text.length > 200000
+        ? text.slice(0, 200000) + "\n\n… (đã cắt bớt, mở bản gốc để xem đầy đủ)"
+        : text;
+      body.innerHTML = "";
+      body.appendChild(pre);
+    }
+  }
+
   // ---------- search ----------
   let searchTimer;
   searchEl.addEventListener("input", () => {
     clearTimeout(searchTimer);
     searchTimer = setTimeout(() => {
       const q = searchEl.value.trim();
-      if (q) renderSearchResults(q);
-      else navigate(currentPath);
-    }, 120);
+      if (q) showSearch(q); else showFolder(currentPath);
+    }, 150);
   });
 
   // ---------- init ----------
   async function init() {
-    mainEl.innerHTML = `<div class="status-line"><span class="cursor-dot"></span> đang mở kho lưu trữ…</div>`;
+    mainEl.innerHTML = `<p class="status-note">đang mở kho lưu trữ…</p>`;
     try {
-      const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`, { headers: apiHeaders() });
-      if (!res.ok) {
-        if (res.status === 401 || res.status === 403) {
-          throw new Error("Từ chối truy cập (mã " + res.status + "). Nếu repo là private, nhập token ở nút ⚿ trên thanh công cụ.");
-        }
-        throw new Error("HTTP " + res.status);
-      }
+      const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`);
+      if (!res.ok) throw new Error("HTTP " + res.status);
       const data = await res.json();
       root = buildTree(data.tree || []);
-      const totals = countAll(root);
-      itemTotalEl.textContent = `${totals.files} tệp trong ${totals.dirs} thư mục`;
-      navigate("");
+      showFolder("");
     } catch (err) {
       mainEl.innerHTML = `
-        <p class="err">Không tải được kho lưu trữ: ${err.message}</p>
-        <p class="empty-note" style="text-align:left; padding-top:0;">GitHub API công khai giới hạn 60 lượt gọi/giờ cho mỗi IP — nếu vừa tải lại trang nhiều lần, đợi vài phút rồi thử lại.</p>
-        <button id="retry-init" class="viewer-back" style="margin-top:6px;">↻ thử lại</button>
+        <div class="err-note">
+          Không tải được kho lưu trữ: ${err.message}.<br>
+          GitHub API công khai giới hạn 60 lượt/giờ mỗi IP — nếu vừa tải lại nhiều lần, đợi vài phút rồi thử lại.
+          <div><button id="retry-init">↻ thử lại</button></div>
+        </div>
       `;
       document.getElementById("retry-init").addEventListener("click", init);
     }

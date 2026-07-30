@@ -1,19 +1,16 @@
 # vhd0.github.io
 
-Trang GitHub Pages hiển thị **nội dung bạn lưu trong repo dưới dạng thẻ mục lục** (kiểu tủ hồ sơ lưu trữ) — duyệt theo thư mục, tự động cập nhật, không cần build.
+Trang GitHub Pages hiển thị nội dung repo dưới dạng **danh sách file/thư mục kiểu trình quản lý FTP** — đơn giản, không popup, không overlay.
 
 ## Cách hoạt động
 
-`app.js` gọi GitHub API (`/git/trees/main?recursive=1`) để lấy toàn bộ file trong repo `vhd0/vhd0.github.io`, dựng thành cây thư mục rồi hiển thị dạng lưới thẻ theo từng cấp — bấm vào thư mục để đi vào trong, bấm vào file để xem nội dung (text, markdown, ảnh) ở lớp overlay.
+`app.js` gọi GitHub API để lấy danh sách file trong repo `vhd0/vhd0.github.io`, hiển thị thành danh sách dòng: bấm vào thư mục để đi vào (có dòng `..` để quay lại thư mục cha), bấm vào file để xem nội dung ngay trong cùng khung — không dùng cửa sổ nổi, nên nút "quay lại" luôn hoạt động.
 
-**Ví dụ:** publish file tại `abp/abp.txt` → trang tự hiện thư mục `abp`, bấm vào sẽ thấy file `abp.txt` bên trong. Không cần sửa code, chỉ cần `git push`.
+**Ví dụ:** publish file tại `abp/abp.txt` → trang tự hiện thư mục `abp`, bấm vào sẽ thấy file `abp.txt` bên trong. Chỉ cần `git push`, không cần sửa code.
 
 ### File setup không hiển thị
 
-Các file dùng để dựng trang được loại khỏi danh sách hiển thị (khai báo trong `EXCLUDE_NAMES` ở đầu `app.js`):
-`index.html`, `style.css`, `app.js`, `README.md`, `.nojekyll`, `.gitignore`, `LICENSE`, `CNAME`, `favicon.ico`, `404.html`.
-
-Muốn ẩn thêm file/thư mục nào, thêm tên (viết thường) vào danh sách `EXCLUDE_NAMES` trong `app.js`.
+Khai báo trong `EXCLUDE_NAMES` ở đầu `app.js`: `index.html`, `style.css`, `app.js`, `README.md`, `.nojekyll`, `.gitignore`, `LICENSE`, `CNAME`, `favicon.ico`, `404.html`. Muốn ẩn thêm, thêm tên (viết thường) vào danh sách đó.
 
 ## Setup
 
@@ -33,14 +30,13 @@ Muốn ẩn thêm file/thư mục nào, thêm tên (viết thường) vào danh 
 
 ## Cấu trúc file
 
-- `index.html` — khung giao diện (topbar, sidebar cây thư mục, panel xem file)
-- `style.css` — giao diện kiểu terminal tối màu
-- `app.js` — gọi GitHub API, dựng cây thư mục, xử lý xem file (text/markdown/ảnh), tìm kiếm/lọc file
-- `.nojekyll` — tắt xử lý Jekyll, giữ nguyên file tĩnh
+- `index.html` — khung trang (thanh path, ô tìm kiếm, khu vực danh sách/nội dung)
+- `style.css` — giao diện đơn giản, sáng màu, kiểu trình quản lý file
+- `app.js` — toàn bộ logic: gọi API, dựng danh sách, xem file, tìm kiếm
+- `.nojekyll` — tắt xử lý Jekyll
 - `README.md` — file này
 
 ## Lưu ý
 
-- GitHub API công khai (không đăng nhập) giới hạn **60 request/giờ/IP**. Trang chỉ gọi 1 request khi tải, nên hiếm khi bị giới hạn trừ khi tải lại liên tục.
-- Repo có thể **public hoặc private**, nhưng nếu private, GitHub API sẽ không trả được dữ liệu vì trang không có xác thực (token). Nếu cần dùng với repo private, cần bổ sung cơ chế xác thực riêng — có thể yêu cầu tôi hỗ trợ thêm.
-- Muốn đổi tên chủ repo/nhánh khác, sửa 3 biến `OWNER`, `REPO`, `BRANCH` ở đầu file `app.js`.
+- Repo cần ở chế độ **public** để GitHub API đọc được (không cần đăng nhập). Nếu chuyển sang private, trang sẽ không tải được nội dung.
+- GitHub API công khai giới hạn 60 lượt gọi/giờ/IP — trang chỉ gọi 1 lần khi tải trang nên hiếm khi chạm giới hạn.

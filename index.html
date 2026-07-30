@@ -3,85 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kho lưu trữ — vhd0</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>vhd0 — kho lưu trữ</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="masthead">
-  <div class="masthead-inner">
-    <div class="stamp" aria-hidden="true">
-      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/></svg>
-      <span>ĐÃ<br>LƯU TRỮ</span>
-    </div>
-    <div class="masthead-text">
-      <p class="eyebrow">vhd0 · kho lưu trữ số</p>
-      <h1>Mọi thứ tôi lưu lại</h1>
-      <p class="subtitle">Duyệt qua các mục theo thư mục, như tra một tủ hồ sơ. Nội dung cập nhật trực tiếp từ kho GitHub.</p>
-    </div>
-  </div>
+<header class="bar">
+  <span class="bar-title">vhd0.github.io</span>
+  <span class="bar-path" id="path">/</span>
 </header>
 
 <div class="toolbar">
-  <nav id="breadcrumb" class="breadcrumb" aria-label="Đường dẫn">
-    <button class="crumb crumb-root" data-path="">Gốc</button>
-  </nav>
-  <div class="toolbar-right">
-    <div class="search-wrap">
-      <input id="search" type="text" placeholder="Tìm trong kho lưu trữ…" autocomplete="off">
-    </div>
-    <button id="token-btn" class="key-btn" title="Thiết lập token truy cập (cho repo private)">⚿</button>
-  </div>
+  <input id="search" type="text" placeholder="Tìm kiếm…" autocomplete="off">
+  <span id="count" class="count"></span>
 </div>
 
-<main id="main" class="main">
-  <div class="status-line">
-    <span class="cursor-dot"></span> đang mở kho lưu trữ…
-  </div>
-</main>
+<main id="main"></main>
 
-<div id="viewer" class="viewer" hidden>
-  <div class="viewer-panel">
-    <button id="viewer-close" class="viewer-close" aria-label="Đóng">✕</button>
-    <div class="viewer-head">
-      <button id="viewer-back" class="viewer-back">← quay lại mục lục</button>
-      <div class="viewer-path" id="viewer-path"></div>
-      <a id="viewer-raw" class="viewer-raw" target="_blank" rel="noopener">bản gốc ↗</a>
-    </div>
-    <div id="viewer-body" class="viewer-body"></div>
-  </div>
-</div>
-
-<div id="token-modal" class="viewer" hidden>
-  <div class="viewer-panel token-panel">
-    <button id="token-close" class="viewer-close" aria-label="Đóng">✕</button>
-    <div class="viewer-head">
-      <span class="viewer-path">Token truy cập GitHub</span>
-    </div>
-    <div class="viewer-body">
-      <p class="token-note">
-        Nếu repo <code>vhd0.github.io</code> đang ở chế độ <strong>Private</strong>, GitHub API công khai sẽ không đọc được nội dung.
-        Tạo một <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">Fine-grained token ↗</a>
-        chỉ cấp quyền <strong>Contents: Read-only</strong> cho riêng repo này, dán vào đây.
-        Token chỉ lưu trong trình duyệt của bạn (localStorage), không gửi đi đâu khác ngoài GitHub.
-      </p>
-      <input id="token-input" class="token-input" type="password" placeholder="github_pat_..." autocomplete="off">
-      <div class="token-actions">
-        <button id="token-save" class="token-save">Lưu &amp; tải lại</button>
-        <button id="token-clear" class="token-clear">Xóa token</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer class="colophon">
-  <span>vhd0.github.io</span>
-  <span class="dot">·</span>
-  <span id="item-total">—</span>
-  <span class="dot">·</span>
-  <a href="https://github.com/vhd0/vhd0.github.io" target="_blank" rel="noopener">nguồn trên GitHub ↗</a>
+<footer class="bar bottom">
+  <a href="https://github.com/vhd0/vhd0.github.io" target="_blank" rel="noopener">nguồn trên GitHub</a>
 </footer>
 
 <script src="app.js"></script>
