@@ -252,8 +252,18 @@ h1{
   font-size: 12.5px;
   padding: 2rem 0;
   text-align:center;
+  line-height:1.6;
 }
-.err{ color:#e0776a; font-size:12.5px; }
+.err{
+  color:#f0897b;
+  font-size:13px;
+  font-weight:600;
+  background: rgba(224,119,106,0.08);
+  border: 1px solid rgba(224,119,106,0.35);
+  padding: 10px 14px;
+  border-radius: 7px;
+  display:inline-block;
+}
 
 /* ---------- viewer overlay ---------- */
 .viewer{

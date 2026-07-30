@@ -268,20 +268,94 @@
   }
 
   // ---------- file viewer ----------
+  function encodePath(path) {
+    return path.split("/").map(encodeURIComponent).join("/");
+  }
+
+  function b64ToUtf8(b64) {
+    const binary = atob(b64.replace(/\n/g, ""));
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return new TextDecoder("utf-8").decode(bytes);
+  }
+
+  function mimeFor(ext) {
+    const map = { png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", gif: "image/gif", webp: "image/webp", ico: "image/x-icon" };
+    return map[ext] || "application/octet-stream";
+  }
+
+  function renderTextContent(item, ext, text) {
+    if (ext === "svg") {
+      viewerBody.innerHTML = `<div>${text}</div>`;
+    } else if (MD_EXT.includes(ext)) {
+      viewerBody.innerHTML = `<div class="md">${renderMarkdown(text)}</div>`;
+    } else {
+      const pre = document.createElement("pre");
+      pre.className = "file-pre";
+      pre.textContent = text.length > 200000
+        ? text.slice(0, 200000) + "\n\n… (đã cắt bớt, mở bản gốc để xem đầy đủ)"
+        : text;
+      viewerBody.innerHTML = "";
+      viewerBody.appendChild(pre);
+    }
+  }
+
+  function renderErrorState(item, message) {
+    viewerBody.innerHTML = `
+      <p class="err">Không thể tải nội dung file này.</p>
+      <p class="empty-note" style="text-align:left; padding-top:0;">${message}</p>
+      <button id="retry-file" class="viewer-back" style="margin-top:10px;">↻ thử lại</button>
+    `;
+    document.getElementById("retry-file").addEventListener("click", () => openFile(item));
+  }
+
   async function openFile(item) {
     const ext = extOf(item.name);
-    const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${item.path}`;
+    const encPath = encodePath(item.path);
+    const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${encPath}`;
+    const contentsUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encPath}?ref=${BRANCH}`;
+
     viewerPath.textContent = "/" + item.path;
     viewerRaw.href = rawUrl;
-    viewerBody.innerHTML = `<p class="empty-note">đang tải…</p>`;
+    viewerBody.innerHTML = `<p class="empty-note"><span class="cursor-dot" style="display:inline-block;margin-right:6px;"></span>đang tải nội dung…</p>`;
     viewer.hidden = false;
     document.body.style.overflow = "hidden";
 
+    const isImg = IMG_EXT.includes(ext) && ext !== "svg";
+
+    // 1) thử qua GitHub Contents API (trả base64, ổn định, không bị chặn CORS)
     try {
-      if (IMG_EXT.includes(ext) && ext !== "svg") {
+      const res = await fetch(contentsUrl, { headers: { Accept: "application/vnd.github.v3+json" } });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.content && data.encoding === "base64") {
+          if (isImg) {
+            viewerBody.innerHTML = "";
+            const img = document.createElement("img");
+            img.className = "img-preview";
+            img.src = `data:${mimeFor(ext)};base64,${data.content.replace(/\n/g, "")}`;
+            viewerBody.appendChild(img);
+          } else {
+            renderTextContent(item, ext, b64ToUtf8(data.content));
+          }
+          return;
+        }
+        // file quá lớn cho Contents API (không có content) → rơi xuống fallback bên dưới
+      } else if (res.status === 404) {
+        renderErrorState(item, "GitHub báo không tìm thấy file này (404). Có thể đường dẫn chứa ký tự đặc biệt hoặc file chưa được đẩy lên nhánh " + BRANCH + ".");
+        return;
+      }
+    } catch (e) {
+      // im lặng, thử fallback tiếp theo
+    }
+
+    // 2) fallback: raw.githubusercontent trực tiếp
+    try {
+      if (isImg) {
         viewerBody.innerHTML = "";
         const img = document.createElement("img");
         img.className = "img-preview";
+        img.onerror = () => renderErrorState(item, "Không kết nối được tới raw.githubusercontent.com — kiểm tra kết nối mạng hoặc thử mở bản gốc.");
         img.src = rawUrl;
         viewerBody.appendChild(img);
         return;
@@ -289,22 +363,9 @@
       const res = await fetch(rawUrl);
       if (!res.ok) throw new Error("HTTP " + res.status);
       const text = await res.text();
-
-      if (ext === "svg") {
-        viewerBody.innerHTML = `<div>${text}</div>`;
-      } else if (MD_EXT.includes(ext)) {
-        viewerBody.innerHTML = `<div class="md">${renderMarkdown(text)}</div>`;
-      } else {
-        const pre = document.createElement("pre");
-        pre.className = "file-pre";
-        pre.textContent = text.length > 200000
-          ? text.slice(0, 200000) + "\n\n… (đã cắt bớt, mở bản gốc để xem đầy đủ)"
-          : text;
-        viewerBody.innerHTML = "";
-        viewerBody.appendChild(pre);
-      }
+      renderTextContent(item, ext, text);
     } catch (err) {
-      viewerBody.innerHTML = `<p class="err">Không thể tải file: ${err.message}</p>`;
+      renderErrorState(item, "Chi tiết lỗi: " + err.message + ". Có thể do giới hạn tốc độ của GitHub API — thử lại sau ít phút, hoặc mở bản gốc bên trên.");
     }
   }
 
@@ -346,6 +407,7 @@
 
   // ---------- init ----------
   async function init() {
+    mainEl.innerHTML = `<div class="status-line"><span class="cursor-dot"></span> đang mở kho lưu trữ…</div>`;
     try {
       const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`);
       if (!res.ok) throw new Error("HTTP " + res.status);
@@ -355,7 +417,12 @@
       itemTotalEl.textContent = `${totals.files} tệp trong ${totals.dirs} thư mục`;
       navigate("");
     } catch (err) {
-      mainEl.innerHTML = `<p class="err">Không tải được kho lưu trữ: ${err.message}. GitHub API có thể đang giới hạn tốc độ — thử tải lại trang sau ít phút.</p>`;
+      mainEl.innerHTML = `
+        <p class="err">Không tải được kho lưu trữ: ${err.message}</p>
+        <p class="empty-note" style="text-align:left; padding-top:0;">GitHub API công khai giới hạn 60 lượt gọi/giờ cho mỗi IP — nếu vừa tải lại trang nhiều lần, đợi vài phút rồi thử lại.</p>
+        <button id="retry-init" class="viewer-back" style="margin-top:6px;">↻ thử lại</button>
+      `;
+      document.getElementById("retry-init").addEventListener("click", init);
     }
   }
 
