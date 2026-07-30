@@ -1,13 +1,17 @@
 # vhd0.github.io
 
-Trang GitHub Pages cá nhân.
+Trang GitHub Pages hiển thị **toàn bộ file trong repo dưới dạng cây thư mục** (file tree), giống một trình duyệt kho lưu trữ — tự động cập nhật, không cần build.
 
-## Hướng dẫn setup
+## Cách hoạt động
 
-1. Tạo repository trên GitHub với tên **chính xác**: `vhd0.github.io`
-   (repo dạng `<username>.github.io` sẽ tự động được GitHub Pages nhận diện là trang chính)
+`app.js` gọi GitHub API (`/git/trees/main?recursive=1`) để lấy danh sách toàn bộ file trong repo `vhd0/vhd0.github.io`, dựng thành cây thư mục ở sidebar bên trái. Nhấp vào một file để xem nội dung (text, markdown, ảnh) ở panel bên phải, tải trực tiếp từ `raw.githubusercontent.com`.
 
-2. Đẩy các file này lên repo:
+→ **Chỉ cần `git push` file mới lên repo, trang sẽ tự hiển thị file đó** mà không cần sửa code.
+
+## Setup
+
+1. Tạo repository trên GitHub tên **chính xác**: `vhd0.github.io`
+2. Đẩy các file này lên:
    ```bash
    cd vhd0.github.io
    git init
@@ -17,20 +21,19 @@ Trang GitHub Pages cá nhân.
    git remote add origin https://github.com/vhd0/vhd0.github.io.git
    git push -u origin main
    ```
-
-3. Vào repo trên GitHub → **Settings** → **Pages**
-   - Source: chọn branch `main`, thư mục `/ (root)`
-   - Nhấn **Save**
-
-4. Sau 1-2 phút, trang sẽ chạy tại: **https://vhd0.github.io**
+3. Vào repo → **Settings → Pages** → Source: branch `main`, thư mục `/ (root)` → **Save**
+4. Sau 1-2 phút, trang chạy tại: **https://vhd0.github.io**
 
 ## Cấu trúc file
 
-- `index.html` — trang chủ
-- `style.css` — style cho trang
-- `.nojekyll` — báo cho GitHub Pages không xử lý qua Jekyll (giữ nguyên file như thường)
+- `index.html` — khung giao diện (topbar, sidebar cây thư mục, panel xem file)
+- `style.css` — giao diện kiểu terminal tối màu
+- `app.js` — gọi GitHub API, dựng cây thư mục, xử lý xem file (text/markdown/ảnh), tìm kiếm/lọc file
+- `.nojekyll` — tắt xử lý Jekyll, giữ nguyên file tĩnh
 - `README.md` — file này
 
-## Chỉnh sửa nội dung
+## Lưu ý
 
-Mở `index.html` và sửa nội dung trong thẻ `<main>`. Mỗi lần `git push` lên `main`, trang sẽ tự động cập nhật sau ít phút.
+- GitHub API công khai (không đăng nhập) giới hạn **60 request/giờ/IP**. Trang chỉ gọi 1 request khi tải, nên hiếm khi bị giới hạn trừ khi tải lại liên tục.
+- Repo có thể **public hoặc private**, nhưng nếu private, GitHub API sẽ không trả được dữ liệu vì trang không có xác thực (token). Nếu cần dùng với repo private, cần bổ sung cơ chế xác thực riêng — có thể yêu cầu tôi hỗ trợ thêm.
+- Muốn đổi tên chủ repo/nhánh khác, sửa 3 biến `OWNER`, `REPO`, `BRANCH` ở đầu file `app.js`.
