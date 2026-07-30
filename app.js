@@ -329,18 +329,18 @@
 
     const linkBtn = document.createElement("button");
     linkBtn.className = "action-btn";
-    linkBtn.textContent = "🔗 Hyperlink";
+    linkBtn.textContent = "🔗 LINK";
     linkBtn.title = urls.pages;
     linkBtn.addEventListener("click", () => copyToClipboard(linkBtn, urls.pages));
 
     const copyBtn = document.createElement("button");
     copyBtn.className = "action-btn";
-    copyBtn.textContent = "📋 Copy";
+    copyBtn.textContent = "📋 COPY";
     copyBtn.disabled = true; // bật lại khi nội dung tải xong
 
     const rawBtn = document.createElement("button");
     rawBtn.className = "action-btn";
-    rawBtn.textContent = "⬇ Raw";
+    rawBtn.textContent = "⬇ RAW";
     rawBtn.title = urls.raw;
     rawBtn.addEventListener("click", () => copyToClipboard(rawBtn, urls.raw));
 
