@@ -3,66 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>vhd0 / vhd0.github.io</title>
+<title>Kho lưu trữ — vhd0</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="scan"></div>
-
-<header class="topbar">
-  <div class="topbar-left">
-    <span class="prompt">$</span>
-    <span class="repo-path">vhd0<span class="sep">/</span>vhd0.github.io</span>
-    <span class="branch">main</span>
-  </div>
-  <div class="topbar-right">
-    <span id="file-count" class="count">-- items</span>
-    <a class="gh-link" href="https://github.com/vhd0/vhd0.github.io" target="_blank" rel="noopener">GitHub ↗</a>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="stamp" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/></svg>
+      <span>ĐÃ<br>LƯU TRỮ</span>
+    </div>
+    <div class="masthead-text">
+      <p class="eyebrow">vhd0 · kho lưu trữ số</p>
+      <h1>Mọi thứ tôi lưu lại</h1>
+      <p class="subtitle">Duyệt qua các mục theo thư mục, như tra một tủ hồ sơ. Nội dung cập nhật trực tiếp từ kho GitHub.</p>
+    </div>
   </div>
 </header>
 
-<div class="layout">
-  <aside class="tree-panel">
-    <div class="tree-panel-head">
-      <span>FILE TREE</span>
-      <input id="filter" type="text" placeholder="lọc file..." autocomplete="off">
-    </div>
-    <div id="tree" class="tree">
-      <div class="loading">
-        <span class="cursor-blink">_</span> đang tải cây thư mục
-      </div>
-    </div>
-  </aside>
-
-  <main class="view-panel">
-    <div class="view-head">
-      <span id="view-path">// chọn một file để xem</span>
-      <button id="raw-btn" class="raw-btn" hidden>raw</button>
-    </div>
-    <div id="view-body" class="view-body">
-      <pre class="welcome">
-  __      ___         _  ___
-  \ \    / / |  __ _  | |/ _ \
-   \ \  / /| |_/ _` | | | | | |
-    \ \/ / |  _| (_| | | | |_| |
-     \  /  |_| \__,_| |_|\___/
-
-
-  Kho lưu trữ cá nhân — mọi file trong repo này
-  sẽ tự động xuất hiện ở cây thư mục bên trái.
-
-  Nhấp vào một file để xem nội dung tại đây.
-      </pre>
-    </div>
-  </main>
+<div class="toolbar">
+  <nav id="breadcrumb" class="breadcrumb" aria-label="Đường dẫn">
+    <button class="crumb crumb-root" data-path="">Gốc</button>
+  </nav>
+  <div class="search-wrap">
+    <input id="search" type="text" placeholder="Tìm trong kho lưu trữ…" autocomplete="off">
+  </div>
 </div>
 
-<footer class="statusbar">
-  <span id="status-text">sẵn sàng</span>
-  <span class="statusbar-right">vhd0.github.io — được host bởi GitHub Pages</span>
+<main id="main" class="main">
+  <div class="status-line">
+    <span class="cursor-dot"></span> đang mở kho lưu trữ…
+  </div>
+</main>
+
+<div id="viewer" class="viewer" hidden>
+  <div class="viewer-panel">
+    <div class="viewer-head">
+      <button id="viewer-back" class="viewer-back">← quay lại mục lục</button>
+      <div class="viewer-path" id="viewer-path"></div>
+      <a id="viewer-raw" class="viewer-raw" target="_blank" rel="noopener">bản gốc ↗</a>
+    </div>
+    <div id="viewer-body" class="viewer-body"></div>
+  </div>
+</div>
+
+<footer class="colophon">
+  <span>vhd0.github.io</span>
+  <span class="dot">·</span>
+  <span id="item-total">—</span>
+  <span class="dot">·</span>
+  <a href="https://github.com/vhd0/vhd0.github.io" target="_blank" rel="noopener">nguồn trên GitHub ↗</a>
 </footer>
 
 <script src="app.js"></script>

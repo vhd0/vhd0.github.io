@@ -1,12 +1,19 @@
 # vhd0.github.io
 
-Trang GitHub Pages hiển thị **toàn bộ file trong repo dưới dạng cây thư mục** (file tree), giống một trình duyệt kho lưu trữ — tự động cập nhật, không cần build.
+Trang GitHub Pages hiển thị **nội dung bạn lưu trong repo dưới dạng thẻ mục lục** (kiểu tủ hồ sơ lưu trữ) — duyệt theo thư mục, tự động cập nhật, không cần build.
 
 ## Cách hoạt động
 
-`app.js` gọi GitHub API (`/git/trees/main?recursive=1`) để lấy danh sách toàn bộ file trong repo `vhd0/vhd0.github.io`, dựng thành cây thư mục ở sidebar bên trái. Nhấp vào một file để xem nội dung (text, markdown, ảnh) ở panel bên phải, tải trực tiếp từ `raw.githubusercontent.com`.
+`app.js` gọi GitHub API (`/git/trees/main?recursive=1`) để lấy toàn bộ file trong repo `vhd0/vhd0.github.io`, dựng thành cây thư mục rồi hiển thị dạng lưới thẻ theo từng cấp — bấm vào thư mục để đi vào trong, bấm vào file để xem nội dung (text, markdown, ảnh) ở lớp overlay.
 
-→ **Chỉ cần `git push` file mới lên repo, trang sẽ tự hiển thị file đó** mà không cần sửa code.
+**Ví dụ:** publish file tại `abp/abp.txt` → trang tự hiện thư mục `abp`, bấm vào sẽ thấy file `abp.txt` bên trong. Không cần sửa code, chỉ cần `git push`.
+
+### File setup không hiển thị
+
+Các file dùng để dựng trang được loại khỏi danh sách hiển thị (khai báo trong `EXCLUDE_NAMES` ở đầu `app.js`):
+`index.html`, `style.css`, `app.js`, `README.md`, `.nojekyll`, `.gitignore`, `LICENSE`, `CNAME`, `favicon.ico`, `404.html`.
+
+Muốn ẩn thêm file/thư mục nào, thêm tên (viết thường) vào danh sách `EXCLUDE_NAMES` trong `app.js`.
 
 ## Setup
 
