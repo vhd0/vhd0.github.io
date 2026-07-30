@@ -1,6 +1,6 @@
-vless://431fe973-a43a-4fac-bf83-2a772e0d0625@207.174.133.222:10000?encryption=none&security=none&type=tcp#HK | 01
-trojan://d1960ba9f0f6353353994fa844cf817b@43.199.32.78:13118?allowInsecure=0&sni=www.nintendogames.net#HK | 02
-trojan://BxceQaOe@119.246.1.143:443?security=tls&amp;insecure=1&amp;headerType=none&amp;type=tcp&amp;allowInsecure=1#HK | 03
-trojan://BxceQaOe@16.163.138.98:27161?allowInsecure=1&sni=t.me%2Fripaojiedian#HK | 04
+vless://431fe973-a43a-4fac-bf83-2a772e0d0625@207.174.133.222:10000?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&encryption=none&security=none&type=tcp&headerType=none#HK | 01
+trojan://BxceQaOe@16.163.138.98:27161?allowInsecure=1&sni=t.me%2Fripaojiedian#HK | 02
+trojan://d1960ba9f0f6353353994fa844cf817b@43.199.32.78:13118?allowInsecure=0&sni=www.nintendogames.net#HK | 03
+trojan://BxceQaOe@119.246.1.143:443?security=tls&amp;insecure=1&amp;headerType=none&amp;type=tcp&amp;allowInsecure=1#HK | 04
 vmess://eyJhZGQiOiJuMTc0NzYyNDI2MC40dTltYS5pY3UiLCJhaWQiOjAsImFsbG93X2luc2VjdXJlIjoiMSIsImFsbG93SW5zZWN1cmUiOiIxIiwiaWQiOiJlZWU4Y2I3Mi03ZWFiLTQwMzQtYTMwOC1lZDA2Y2IwN2UwMDMiLCJpbnNlY3VyZSI6IjEiLCJuZXQiOiJ3cyIsInBvcnQiOjQ0MywicHMiOiJISyB8IDA1Iiwic2VjdXJpdHkiOiJhdXRvIiwidGxzIjoidGxzIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZX0#HK | 05
 vless://0b9bcbc1-b289-4a64-86fa-a5b731b65384@hk.vrsvpn.com:444?mode=gun&security=reality&encryption=none&pbk=lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ&fp=chrome&type=grpc&serviceName=web.max.ru&sni=web.max.ru&sid=8622176789abcdef#HK | 06
