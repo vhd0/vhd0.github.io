@@ -13,6 +13,28 @@
   const IMG_EXT = ["png", "jpg", "jpeg", "gif", "webp", "svg", "ico"];
   const MD_EXT = ["md", "markdown"];
 
+  // Chỉ những đuôi file này mới được thử đọc như văn bản.
+  // Mọi đuôi khác (apk, zip, exe, mp3, mp4, pdf, ...) coi là nhị phân — không giải mã.
+  const TEXT_EXT = [
+    "txt", "md", "markdown", "json", "jsonc", "js", "mjs", "cjs", "ts", "tsx", "jsx",
+    "html", "htm", "css", "scss", "sass", "less", "xml", "svg", "yml", "yaml", "toml",
+    "ini", "cfg", "conf", "env", "csv", "tsv", "log", "sql",
+    "py", "java", "kt", "c", "h", "cpp", "hpp", "cs", "go", "rb", "php", "rs",
+    "sh", "bash", "zsh", "bat", "ps1", "gitignore", "dockerfile", "makefile",
+    "swift", "lua", "pl", "vue", "graphql", "gql", "proto", "r"
+  ];
+
+  function classify(name) {
+    const ext = extOf(name);
+    if (IMG_EXT.includes(ext)) return "image";
+    if (TEXT_EXT.includes(ext)) return "text";
+    return "binary";
+  }
+
+  function extLabel(ext) {
+    return ext ? ext.toUpperCase() : "FILE";
+  }
+
   const mainEl = document.getElementById("main");
   const pathEl = document.getElementById("path");
   const searchEl = document.getElementById("search");
@@ -37,13 +59,20 @@
   function iconFor(item) {
     if (item.type === "dir") return "📁";
     const ext = extOf(item.name);
-    if (IMG_EXT.includes(ext)) return "🖼";
+    const kind = classify(item.name);
+    if (kind === "image") return "🖼";
     if (MD_EXT.includes(ext)) return "📝";
-    if (["html", "htm"].includes(ext)) return "🌐";
-    if (["json", "yml", "yaml"].includes(ext)) return "🔧";
+    if (kind === "text") {
+      if (["html", "htm"].includes(ext)) return "🌐";
+      if (["json", "yml", "yaml"].includes(ext)) return "🔧";
+      return "📄";
+    }
     if (["zip", "rar", "7z"].includes(ext)) return "🗜";
-    if (["pdf"].includes(ext)) return "📕";
-    return "📄";
+    if (ext === "apk") return "📱";
+    if (["mp3", "wav", "flac", "m4a"].includes(ext)) return "🎵";
+    if (["mp4", "mov", "mkv", "avi"].includes(ext)) return "🎬";
+    if (ext === "pdf") return "📕";
+    return "📦";
   }
 
   // ---------- build filtered nested tree ----------
@@ -327,28 +356,34 @@
     const actions = document.createElement("div");
     actions.className = "file-actions";
 
-    const linkBtn = document.createElement("button");
+    const linkBtn = document.createElement("a");
     linkBtn.className = "action-btn";
-    linkBtn.textContent = "🔗 LINK";
+    linkBtn.textContent = "🔗 Hyperlink";
+    linkBtn.href = urls.pages;
+    linkBtn.target = "_blank";
+    linkBtn.rel = "noopener";
     linkBtn.title = urls.pages;
-    linkBtn.addEventListener("click", () => copyToClipboard(linkBtn, urls.pages));
 
     const copyBtn = document.createElement("button");
     copyBtn.className = "action-btn";
-    copyBtn.textContent = "📋 COPY";
-    copyBtn.disabled = true; // bật lại khi nội dung tải xong
+    copyBtn.textContent = "📋 Copy";
+    copyBtn.disabled = true; // bật lại khi có nội dung text để copy
 
-    const rawBtn = document.createElement("button");
+    const rawBtn = document.createElement("a");
     rawBtn.className = "action-btn";
-    rawBtn.textContent = "⬇ RAW";
+    rawBtn.textContent = "⬇ Raw";
+    rawBtn.href = urls.raw;
+    rawBtn.target = "_blank";
+    rawBtn.rel = "noopener";
     rawBtn.title = urls.raw;
-    rawBtn.addEventListener("click", () => copyToClipboard(rawBtn, urls.raw));
 
-    const cdnBtn = document.createElement("button");
+    const cdnBtn = document.createElement("a");
     cdnBtn.className = "action-btn";
     cdnBtn.textContent = "☁ CDN";
+    cdnBtn.href = urls.cdn;
+    cdnBtn.target = "_blank";
+    cdnBtn.rel = "noopener";
     cdnBtn.title = urls.cdn;
-    cdnBtn.addEventListener("click", () => copyToClipboard(cdnBtn, urls.cdn));
 
     actions.append(linkBtn, copyBtn, rawBtn, cdnBtn);
 
@@ -374,15 +409,33 @@
     document.getElementById("retry-btn").addEventListener("click", () => showFile(item));
   }
 
+  function showBinaryInfo(body, item, ext) {
+    body.innerHTML = "";
+    const card = document.createElement("div");
+    card.className = "binary-card";
+    card.innerHTML = `
+      <div class="binary-badge">${extLabel(ext)}</div>
+      <p class="binary-title">Đây là file nhị phân, không thể xem trước dạng văn bản.</p>
+      <p class="binary-sub">Dung lượng: ${humanSize(item.size)} — dùng các nút RAW hoặc CDN phía trên để tải/mở file.</p>
+    `;
+    body.appendChild(card);
+  }
+
   async function showFile(item) {
     const ext = extOf(item.name);
+    const kind = classify(item.name);
     const encPath = encodePath(item.path);
     const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${encPath}`;
     const contentsUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encPath}?ref=${BRANCH}`;
     const pagesUrl = `https://${OWNER}.github.io/${encPath}`;
     const cdnUrl = `https://cdn.jsdelivr.net/gh/${OWNER}/${REPO}@${BRANCH}/${encPath}`;
     const { body, copyBtn } = fileViewShell(item, { pages: pagesUrl, raw: rawUrl, cdn: cdnUrl });
-    const isImg = IMG_EXT.includes(ext) && ext !== "svg";
+
+    // File nhị phân: không tải/giải mã nội dung, chỉ hiển thị thông tin + link tải
+    if (kind === "binary") {
+      showBinaryInfo(body, item, ext);
+      return;
+    }
 
     // 1) GitHub Contents API (ổn định, trả base64)
     try {
@@ -390,7 +443,7 @@
       if (res.ok) {
         const data = await res.json();
         if (data && typeof data.content === "string" && data.encoding === "base64") {
-          if (isImg) {
+          if (kind === "image") {
             body.innerHTML = "";
             const img = document.createElement("img");
             img.className = "img-preview";
@@ -410,7 +463,7 @@
 
     // 2) fallback: raw.githubusercontent
     try {
-      if (isImg) {
+      if (kind === "image") {
         body.innerHTML = "";
         const img = document.createElement("img");
         img.className = "img-preview";
