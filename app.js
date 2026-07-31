@@ -358,7 +358,7 @@
 
     const linkBtn = document.createElement("a");
     linkBtn.className = "action-btn";
-    linkBtn.textContent = "🔗 Hyperlink";
+    linkBtn.textContent = "🔗 DIRECT";
     linkBtn.href = urls.pages;
     linkBtn.target = "_blank";
     linkBtn.rel = "noopener";
@@ -366,12 +366,12 @@
 
     const copyBtn = document.createElement("button");
     copyBtn.className = "action-btn";
-    copyBtn.textContent = "📋 Copy";
+    copyBtn.textContent = "📋 COPY";
     copyBtn.disabled = true; // bật lại khi có nội dung text để copy
 
     const rawBtn = document.createElement("a");
     rawBtn.className = "action-btn";
-    rawBtn.textContent = "⬇ Raw";
+    rawBtn.textContent = "⬇ RAW";
     rawBtn.href = urls.raw;
     rawBtn.target = "_blank";
     rawBtn.rel = "noopener";
