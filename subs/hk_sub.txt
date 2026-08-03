@@ -1,5 +1,4 @@
 trojan://BxceQaOe@119.246.1.143:443?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#HK | 01
-vless://74199cb4-6d12-404a-9529-14de3bffec9c@fv2026.node2.top:21001?flow=xtls-rprx-vision&fp=chrome&pbk=HWUNFHoOryJHQXKF-ZOm6wMYZdVJwH5aHGa5I9_HDGA&security=reality&sid=dfa28122&sni=itunes.apple.com&type=tcp#HK | 02
-vmess://eyJ2IjpudWxsLCJhZGQiOiJuMTc0NzYyNDI3NC40dTltYS5pY3UiLCJwb3J0Ijo0NDMsImlkIjoiZDhkYWY1MDctYTRhYy00ZWVhLTgzOTktOGYwY2QwNzFlYjUyIiwiYWlkIjoiMCIsInNjeSI6bnVsbCwibmV0Ijoid3MiLCJ0eXBlIjpudWxsLCJob3N0IjoibjE3NDc2MjQyNzQuNHU5bWEuaWN1IiwiYWxwbiI6bnVsbCwicGF0aCI6Ii8iLCJ0bHMiOiJ0bHMiLCJzbmkiOm51bGwsImZwIjpudWxsLCJwcyI6IkhLIHwgMDMiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ#HK | 03
-vless://5d02517f-63d5-3e9f-b467-1bcf4d4e25d3@s299.freessr.bid:443?flow=xtls-rprx-vision&fp=chrome&security=tls&sni=u695099u36cf43b9s298.wagahaha.xyz&type=tcp#HK | 04
-vless://0b9bcbc1-b289-4a64-86fa-a5b731b65384@85.11.161.8:444?fp=firefox&pbk=lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ&security=reality&serviceName=web.max.ru&sid=8622176789abcdef&sni=web.max.ru&type=grpc#HK | 05
+vless://50b9493c-5503-4f97-bbeb-adaaaaf1dc3d@141.11.76.57:21001?flow=xtls-rprx-vision&fp=firefox&pbk=HWUNFHoOryJHQXKF-ZOm6wMYZdVJwH5aHGa5I9_HDGA&security=reality&sid=dfa28122&sni=itunes.apple.com&type=tcp#HK | 02
+vless://0b9bcbc1-b289-4a64-86fa-a5b731b65384@85.11.161.8:444?fp=firefox&pbk=lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ&security=reality&serviceName=web.max.ru&sid=8622176789abcdef&sni=web.max.ru&type=grpc#HK | 03
+vless://9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b@47.83.153.19:59750?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg&security=reality&sni=www.amd.com&type=tcp#HK | 04
