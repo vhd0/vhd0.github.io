@@ -1,7 +1,7 @@
-trojan://BxceQaOe@119.246.1.143:443?allowInsecure=1&sni=t.me%2Fripaojiedian&type=tcp#HK | 01
+trojan://BxceQaOe@119.246.1.143:443?security=tls#HK | 01
 vless://57A71E7F-E6B5-42BF-A4A6-47ECCBE7F50C@hk2-r.link-t7.com:10127/?type=grpc&encryption=none&flow=&serviceName=update&sni=s0.awsstatic.com&fp=chrome&security=reality&pbk=wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE&sid=686c0ef0#HK | 02
-vless://57A71E7F-E6B5-42BF-A4A6-47ECCBE7F50C@hk1-r.link-t7.com:10126/?type=grpc&encryption=none&flow=&serviceName=update&sni=s0.awsstatic.com&fp=chrome&security=reality&pbk=wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE&sid=686c0ef0#HK | 03
+trojan://ND91608427@dynamic-grubworm.rooster465.autos:443?sni=dynamic-grubworm.rooster465.autos&type=tcp#HK | 03
 trojan://ND91608427@upright-hamster.rooster465.autos:443?security=tls&sni=upright-hamster.rooster465.autos#HK | 04
-vmess://eyJhZGQiOiJuMTc0NzYyNDI3NC40dTltYS5pY3UiLCJhaWQiOjAsImhvc3QiOiJuMTc0NzYyNDI3NC40dTltYS5pY3UiLCJpZCI6ImQ4ZGFmNTA3LWE0YWMtNGVlYS04Mzk5LThmMGNkMDcxZWI1MiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0Ijo0NDMsInBzIjoiSEsgfCAwNSIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIn0#HK | 05
-trojan://ND91608427@91.199.84.120:443?sni=dynamic-grubworm.rooster465.autos&type=tcp#HK | 06
-vless://0b9bcbc1-b289-4a64-86fa-a5b731b65384@hk.vrsvpn.com:444?encryption=none&security=reality&type=grpc&sni=web.max.ru&fp=chrome&pbk=lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ&sid=8622176789abcdef&serviceName=web.max.ru&mode=gun#HK | 07
+vless://0b9bcbc1-b289-4a64-86fa-a5b731b65384@hk.vrsvpn.com:444?encryption=none&security=reality&type=grpc&sni=web.max.ru&fp=chrome&pbk=lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ&sid=8622176789abcdef&serviceName=web.max.ru&mode=gun#HK | 05
+vless://57A71E7F-E6B5-42BF-A4A6-47ECCBE7F50C@hk1-r.link-t7.com:10126/?type=grpc&encryption=none&flow=&serviceName=update&sni=s0.awsstatic.com&fp=chrome&security=reality&pbk=wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE&sid=686c0ef0#HK | 06
+vmess://eyJhZGQiOiJuMTc0NzYyNDI3NC40dTltYS5pY3UiLCJhaWQiOjAsImhvc3QiOiJuMTc0NzYyNDI3NC40dTltYS5pY3UiLCJpZCI6ImQ4ZGFmNTA3LWE0YWMtNGVlYS04Mzk5LThmMGNkMDcxZWI1MiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0Ijo0NDMsInBzIjoiSEsgfCAwNyIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIn0#HK | 07
