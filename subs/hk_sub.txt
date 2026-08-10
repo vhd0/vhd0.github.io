@@ -1,5 +1,6 @@
-vless://9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b@47.83.153.19:59750?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.amd.com&fp=chrome&pbk=W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg&type=tcp&headerType=none#HK | 01
-trojan://ND91608427@91.199.84.120:443?sni=dynamic-grubworm.rooster465.autos#HK | 02
-trojan://ND91608427@185.244.208.13:443?security=tls&sni=ace-starling.rooster465.autos#HK | 03
-vless://96563f88-f743-4395-a3b2-27ec462ae45e@35.241.98.220:443/?type=tcp&encryption=none&flow=&sni=www.cloudflare.com&fp=chrome&security=reality&pbk=bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo&sid=ec2c7091fe76336c&packetEncoding=xudp#HK | 04
-trojan://BxceQaOe@119.246.1.143:443?security=tls#HK | 05
+vless://172f8e98-fe41-4006-9b6d-0035cd09ab40@141.11.76.57:21001?flow=xtls-rprx-vision&fp=firefox&pbk=HWUNFHoOryJHQXKF-ZOm6wMYZdVJwH5aHGa5I9_HDGA&security=reality&sid=dfa28122&sni=itunes.apple.com&type=tcp#HK | 01
+vless://9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b@47.83.153.19:59750?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.amd.com&fp=chrome&pbk=W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg&type=tcp&headerType=none#HK | 02
+trojan://BxceQaOe@119.246.1.143:443?security=tls#HK | 03
+vless://97672a88-ec39-4234-a102-1df6f9236f36@47.86.249.58:41528?alpn=http%2F1.1&fp=chrome&pbk=vSXM6NtiXtPcwqZpXCTpKLBOPewzcEfr9-p18aiywio&security=reality&sid=b4&sni=www.apple.com&type=tcp#HK | 04
+trojan://ND91608427@185.244.208.13:443?security=tls&sni=ace-starling.rooster465.autos#HK | 05
+trojan://ND91608427@91.199.84.120:443?sni=dynamic-grubworm.rooster465.autos#HK | 06
