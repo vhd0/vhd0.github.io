@@ -145,6 +145,14 @@ https://live-a.fptplay53.net/live/media/vtv10/live247-hls-avc/index.m3u8
 https://live.fptplay53.net/live/media/vtv10/live247-hls-avc/index.m3u8
 #EXTINF:-1 tvg-id="vtv10hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/VTV10_logo_2026.png/960px-VTV10_logo_2026.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/22/VTV_2013.png" group-title="VTV",VTV10 [Du phong 4]
 https://vips-livecdn.fptplay.net/live/media/vtv10/live247-hls-avc/index.m3u8
+#EXTINF:-1 tvg-id="onkids" tvg-logo="https://epg.io.vn/logos/29.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/VTVcab_logo_2013.svg/960px-VTVcab_logo_2013.svg.png" group-title="VTVCab ON",ON Kids
+https://freem3u.xyz/api/live/play.m3u8?vid=179
+#EXTINF:-1 tvg-id="onlife" tvg-logo="https://epg.io.vn/logos/30.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/VTVcab_logo_2013.svg/960px-VTVcab_logo_2013.svg.png" group-title="VTVCab ON",ON Life
+https://freem3u.xyz/api/live/play.m3u8?vid=188
+#EXTINF:-1 tvg-id="onmovies" tvg-logo="https://epg.io.vn/logos/15.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/VTVcab_logo_2013.svg/960px-VTVcab_logo_2013.svg.png" group-title="VTVCab ON",ON Movies
+https://freem3u.xyz/api/live/play.m3u8?vid=181
+#EXTINF:-1 tvg-id="onviedrama" tvg-logo="https://i.ibb.co/VptvgFVx/IMG-2530.webp" group-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/VTVcab_logo_2013.svg/960px-VTVcab_logo_2013.svg.png" group-title="VTVCab ON",ON Vie Drama
+http://dvrfl05.bozztv.com/vch_vchannel18/index.m3u8
 #EXTINF:-1 tvg-id="htv9hd" tvg-logo="https://epg.io.vn/logos/37.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV9
 https://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="htvkey" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/9e/Logo_HTV_Key.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV Key
@@ -385,14 +393,6 @@ https://vnno-mb-2-tf-multi-playlist-zmp3.zmdcdn.me/KOY-wvc-pKE/zhls/playback-rea
 https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8
 #EXTINF:-1 tvg-id="ninhthuan" tvg-logo="https://i.imgur.com/HIyUzLM.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Ninh Thuan
 https://cdnbaokhanhhoa.com/live/90405a889081.m3u8?vhost=video
-#EXTINF:-1 tvg-id="onkids" tvg-logo="https://epg.io.vn/logos/29.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",ON Kids
-https://freem3u.xyz/api/live/play.m3u8?vid=179
-#EXTINF:-1 tvg-id="onlife" tvg-logo="https://epg.io.vn/logos/30.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",ON Life
-https://freem3u.xyz/api/live/play.m3u8?vid=188
-#EXTINF:-1 tvg-id="onmovies" tvg-logo="https://epg.io.vn/logos/15.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",ON Movies
-https://freem3u.xyz/api/live/play.m3u8?vid=181
-#EXTINF:-1 tvg-id="onviedrama" tvg-logo="https://i.ibb.co/VptvgFVx/IMG-2530.webp" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",ON Vie Drama
-http://dvrfl05.bozztv.com/vch_vchannel18/index.m3u8
 #EXTINF:-1 tvg-id="phutho" tvg-logo="https://i.imgur.com/LXuRwJY.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Phú Thọ
 https://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="quangngai" tvg-logo="https://i.imgur.com/FTyvVYO.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Quảng Ngãi
@@ -437,5 +437,3 @@ http://125hvt.ddns.net:21585/thvl1/playlist.m3u8
 https://1011154949.vnns.net/CDN-FPT02/THVL2-HD-1080p/playlist.m3u8
 #EXTINF:-1 tvg-id="vinhlong5hd" tvg-logo="https://i.imgur.com/F12VdKO.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Vĩnh Long 5
 https://live.fptplay53.net/epzsd1/vinhlong5_vhls.smil/chunklist.m3u8
-#EXTINF:-1 tvg-id="vsbet" tvg-logo="https://i.imgur.com/sMhL2Nl.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",VSBet
-https://live05.meung.app/live/16226575.m3u8
