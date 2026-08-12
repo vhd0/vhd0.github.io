@@ -1,8 +1,8 @@
 vless://96563f88-f743-4395-a3b2-27ec462ae45e@35.241.98.220:443/?type=tcp&encryption=none&flow=&sni=www.cloudflare.com&fp=chrome&security=reality&pbk=bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo&sid=ec2c7091fe76336c&packetEncoding=xudp#HK | 01
 vless://2058418a-7718-4050-bdd5-db7487ffdb3b@34.96.200.38:443?fp=chrome&pbk=uoXBNYcBgR-h2YmU1NFhFyASr6qh9UghWOuo1WZIikw&security=reality&sid=17d824dd68e24aaf&sni=www.cloudflare.com&type=tcp#HK | 02
 trojan://BxceQaOe@18.162.120.218:11035?allowInsecure=1&sni=t.me%2Fripaojiedian#HK | 03
-trojan://ND91608427@91.199.84.120:443?sni=dynamic-grubworm.rooster465.autos#HK | 04
-trojan://ND91608427@ace-starling.rooster465.autos:443?security=tls&sni=ace-starling.rooster465.autos#HK | 05
-vmess://eyJhZGQiOiJuMTc0NzYyNDI2MC40dTltYS5pY3UiLCJhaWQiOjAsImhvc3QiOiJuMTc0NzYyNDI2MC40dTltYS5pY3UiLCJpZCI6ImVlZThjYjcyLTdlYWItNDAzNC1hMzA4LWVkMDZjYjA3ZTAwMyIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0Ijo0NDMsInBzIjoiSEsgfCAwNiIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIn0#HK | 06
-vless://9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b@47.83.153.19:59750?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.amd.com&fp=chrome&pbk=W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg&type=tcp&headerType=none#HK | 07
-trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=119.246.1.143#HK | 08
+trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=119.246.1.143#HK | 04
+trojan://ND91608427@91.199.84.120:443?sni=dynamic-grubworm.rooster465.autos#HK | 05
+trojan://ND91608427@upright-hamster.rooster465.autos:443?security=tls&sni=upright-hamster.rooster465.autos#HK | 06
+ss://Y2hhY2hhMjAtaWV0Zjphc2QxMjM0NTY@103.141.221.101:8388#HK | 07
+vmess://eyJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiI4NDVlNmIwOC0yOTE5LTQyOTAtYWRlMC01ZGM3ZGNlYTU5Y2EiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraSIsInBvcnQiOiI0NDg2NyIsInBzIjoiSEsgfCAwOCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ#HK | 08
