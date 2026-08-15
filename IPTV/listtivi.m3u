@@ -37,6 +37,8 @@ https://vips-livecdn.fptplay.net/live/media/vtv2/live247-hls-avc/index.m3u8
 https://vtvgolive-failover.vtvdigital.vn/vtvgo/vtv2-manifest.m3u8
 #EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://i.imgur.com/qWWpYRR.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/22/VTV_2013.png" group-title="VTV",VTV2 [Du phong 6]
 https://dethich.pw/vtv2/index.m3u8
+#EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://i.imgur.com/qWWpYRR.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/22/VTV_2013.png" group-title="VTV",VTV2 [Du phong 7]
+http://125hvt.ddns.net:21585/vtv2/playlist.m3u8
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://i.imgur.com/4lJG1fu.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/22/VTV_2013.png" group-title="VTV",VTV3
 https://live.fptplay53.net/live/media/vtv3/live247-hls-avc/vtv3.m3u8
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://i.imgur.com/4lJG1fu.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/22/VTV_2013.png" group-title="VTV",VTV3 [Du phong 1]
