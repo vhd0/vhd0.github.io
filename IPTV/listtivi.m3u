@@ -305,8 +305,6 @@ https://live.canthotv.vn/live/tv/chunklist.m3u8
 https://live.fptplay53.net/epzhd2/cantho02_vhls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="cantho2" tvg-logo="https://i.imgur.com/0fGI8cJ.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Cần Thơ 2 [Du phong 1]
 https://live.canthotv.vn/cs2/live.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="cantho2" tvg-logo="https://i.imgur.com/0fGI8cJ.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Cần Thơ 2 [Du phong 2]
-https://megasystems-6c680321cd.gw-dthcdn.com/haugiangtv/haugiangtv.m3u8
 #EXTINF:-1 tvg-id="cantho3" tvg-logo="https://i.imgur.com/0fGI8cJ.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Cần Thơ 3
 https://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="cantho3" tvg-logo="https://i.imgur.com/0fGI8cJ.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" group-title="Dia Phuong",Cần Thơ 3 [Du phong 1]
