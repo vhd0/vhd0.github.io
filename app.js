@@ -35,6 +35,12 @@
     return ext ? ext.toUpperCase() : "FILE";
   }
 
+  function typeLabel(item) {
+    if (item.type === "dir") return "Thư mục";
+    const ext = extOf(item.name);
+    return ext ? ext.toUpperCase() : "FILE";
+  }
+
   const mainEl = document.getElementById("main");
   const pathEl = document.getElementById("path");
   const searchEl = document.getElementById("search");
@@ -43,6 +49,9 @@
   let root = null;
   let currentPath = "";   // thư mục đang xem
   let searchQuery = "";
+  let sortKey = "name";   // name | size | type
+  let sortDir = 1;        // 1 = tăng dần, -1 = giảm dần
+  const commitDateCache = new Map(); // path -> chuỗi ngày đã format (hoặc null nếu lỗi)
 
   function extOf(name) {
     const i = name.lastIndexOf(".");
@@ -135,8 +144,16 @@
 
   function sortEntries(children) {
     return Object.values(children).sort((a, b) => {
-      if (a.type !== b.type) return a.type === "dir" ? -1 : 1;
-      return a.name.localeCompare(b.name, "vi");
+      if (a.type !== b.type) return a.type === "dir" ? -1 : 1; // thư mục luôn ở trên
+      let cmp = 0;
+      if (sortKey === "name") {
+        cmp = a.name.localeCompare(b.name, "vi");
+      } else if (sortKey === "size") {
+        cmp = (a.size || 0) - (b.size || 0);
+      } else if (sortKey === "type") {
+        cmp = typeLabel(a).localeCompare(typeLabel(b), "vi") || a.name.localeCompare(b.name, "vi");
+      }
+      return cmp * sortDir;
     });
   }
 
@@ -152,19 +169,46 @@
     return { files, dirs };
   }
 
-  // ---------- row builder ----------
-  function makeRow({ icon, cls, name, meta, onClick }) {
+  // ---------- row + header builder ----------
+  function makeRow({ icon, cls, name, type, size, onClick }) {
     const row = document.createElement("button");
     row.className = "row " + cls;
     row.innerHTML = `
       <span class="row-icon">${icon}</span>
       <span class="row-name"></span>
-      <span class="row-meta"></span>
+      <span class="row-type"></span>
+      <span class="row-size"></span>
     `;
     row.querySelector(".row-name").textContent = name;
-    row.querySelector(".row-meta").textContent = meta || "";
+    row.querySelector(".row-type").textContent = type || "";
+    row.querySelector(".row-size").textContent = size || "";
     row.addEventListener("click", onClick);
     return row;
+  }
+
+  function sortArrow(key) {
+    if (sortKey !== key) return "";
+    return sortDir === 1 ? " ▲" : " ▼";
+  }
+
+  function makeListHeader(onSort) {
+    const header = document.createElement("div");
+    header.className = "list-header";
+    header.innerHTML = `
+      <span class="col-icon"></span>
+      <button class="col-btn col-name" data-key="name">Tên${sortArrow("name")}</button>
+      <button class="col-btn col-type" data-key="type">Loại${sortArrow("type")}</button>
+      <button class="col-btn col-size" data-key="size">Kích thước${sortArrow("size")}</button>
+    `;
+    header.querySelectorAll(".col-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.key;
+        if (sortKey === key) sortDir *= -1;
+        else { sortKey = key; sortDir = 1; }
+        onSort();
+      });
+    });
+    return header;
   }
 
   // ---------- views ----------
@@ -180,6 +224,9 @@
 
     const node = findNode(path);
     mainEl.innerHTML = "";
+
+    mainEl.appendChild(makeListHeader(() => showFolder(currentPath)));
+
     const list = document.createElement("div");
     list.className = "list";
 
@@ -188,7 +235,6 @@
         icon: "⬅",
         cls: "up",
         name: "..",
-        meta: "",
         onClick: () => showFolder(parentOf(path))
       }));
     }
@@ -207,7 +253,8 @@
           icon: "📁",
           cls: "dir",
           name: item.name + "/",
-          meta: c.files + " tệp",
+          type: "Thư mục",
+          size: c.files + " tệp",
           onClick: () => showFolder(item.path)
         }));
       } else {
@@ -215,7 +262,8 @@
           icon: iconFor(item),
           cls: "file",
           name: item.name,
-          meta: humanSize(item.size),
+          type: typeLabel(item),
+          size: humanSize(item.size),
           onClick: () => showFile(item)
         }));
       }
@@ -252,15 +300,25 @@
     walk(root);
 
     mainEl.innerHTML = "";
+    mainEl.appendChild(makeListHeader(() => showSearch(searchQuery)));
+
     const list = document.createElement("div");
     list.className = "list";
     list.appendChild(makeRow({
       icon: "⬅",
       cls: "up",
       name: "..",
-      meta: "",
       onClick: () => showFolder(currentPath)
     }));
+
+    matches.sort((a, b) => {
+      if (a.type !== b.type) return a.type === "dir" ? -1 : 1;
+      let cmp = 0;
+      if (sortKey === "name") cmp = a.path.localeCompare(b.path, "vi");
+      else if (sortKey === "size") cmp = (a.size || 0) - (b.size || 0);
+      else if (sortKey === "type") cmp = typeLabel(a).localeCompare(typeLabel(b), "vi");
+      return cmp * sortDir;
+    });
 
     if (matches.length === 0) {
       list.appendChild(rowless(`Không tìm thấy mục nào khớp với "${query}".`));
@@ -270,7 +328,8 @@
           icon: item.type === "dir" ? "📁" : iconFor(item),
           cls: item.type === "dir" ? "dir" : "file",
           name: item.path,
-          meta: item.type === "dir" ? "" : humanSize(item.size),
+          type: typeLabel(item),
+          size: item.type === "dir" ? "" : humanSize(item.size),
           onClick: () => item.type === "dir" ? showFolder(item.path) : showFile(item)
         }));
       });
@@ -337,6 +396,37 @@
     }
   }
 
+  function formatDate(iso) {
+    try {
+      const d = new Date(iso);
+      return d.toLocaleString("vi-VN", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" });
+    } catch (e) { return iso; }
+  }
+
+  async function loadLastModified(path, targetEl) {
+    if (commitDateCache.has(path)) {
+      targetEl.textContent = commitDateCache.get(path) || "không rõ";
+      return;
+    }
+    try {
+      const url = `https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${encodePath(path)}&sha=${BRANCH}&per_page=1`;
+      const res = await fetch(url, { headers: { Accept: "application/vnd.github.v3+json" } });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      if (Array.isArray(data) && data[0] && data[0].commit && data[0].commit.committer) {
+        const label = formatDate(data[0].commit.committer.date);
+        commitDateCache.set(path, label);
+        targetEl.textContent = label;
+      } else {
+        commitDateCache.set(path, null);
+        targetEl.textContent = "không rõ";
+      }
+    } catch (e) {
+      commitDateCache.set(path, null);
+      targetEl.textContent = "không tải được";
+    }
+  }
+
   function fileViewShell(item, urls) {
     mainEl.innerHTML = "";
     const wrap = document.createElement("div");
@@ -352,6 +442,15 @@
     head.querySelector("#back-link").addEventListener("click", () => {
       if (searchQuery) showSearch(searchQuery); else showFolder(currentPath);
     });
+
+    const info = document.createElement("div");
+    info.className = "file-info";
+    const dateSpan = document.createElement("span");
+    dateSpan.className = "file-info-date";
+    dateSpan.textContent = "đang tải…";
+    info.innerHTML = `<span>Kích thước: <strong>${humanSize(item.size)}</strong></span><span class="dot">·</span><span>Loại: <strong>${typeLabel(item)}</strong></span><span class="dot">·</span><span>Cập nhật lần cuối: </span>`;
+    info.appendChild(dateSpan);
+    loadLastModified(item.path, dateSpan);
 
     const actions = document.createElement("div");
     actions.className = "file-actions";
@@ -392,6 +491,7 @@
     body.innerHTML = `<p class="status-note">đang tải nội dung…</p>`;
 
     wrap.appendChild(head);
+    wrap.appendChild(info);
     wrap.appendChild(actions);
     wrap.appendChild(body);
     mainEl.appendChild(wrap);
