@@ -49,9 +49,8 @@
   let root = null;
   let currentPath = "";   // thư mục đang xem
   let searchQuery = "";
-  let sortKey = "name";   // name | size | type
+  let sortKey = "name";   // name | size | type | modified
   let sortDir = 1;        // 1 = tăng dần, -1 = giảm dần
-  const commitDateCache = new Map(); // path -> chuỗi ngày đã format (hoặc null nếu lỗi)
 
   function extOf(name) {
     const i = name.lastIndexOf(".");
@@ -142,6 +141,87 @@
     return parts.join("/");
   }
 
+  // ---------- ngày sửa đổi cuối: tải lười (lazy) + cache + giới hạn song song ----------
+  const modifiedCache = new Map();   // path -> { short, long, ts }
+  const pendingFetches = new Map();  // path -> Promise
+  const modifiedQueue = [];
+  let activeFetches = 0;
+  const MAX_CONCURRENT_FETCH = 3;
+
+  function formatDateShort(iso) {
+    try {
+      return new Date(iso).toLocaleDateString("vi-VN", { year: "2-digit", month: "2-digit", day: "2-digit" });
+    } catch (e) { return "—"; }
+  }
+  function formatDateLong(iso) {
+    try {
+      return new Date(iso).toLocaleString("vi-VN", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" });
+    } catch (e) { return iso; }
+  }
+
+  function fetchModifiedInfo(path) {
+    if (modifiedCache.has(path)) return Promise.resolve(modifiedCache.get(path));
+    if (pendingFetches.has(path)) return pendingFetches.get(path);
+    const url = `https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${encodePath(path)}&sha=${BRANCH}&per_page=1`;
+    const p = fetch(url, { headers: { Accept: "application/vnd.github.v3+json" } })
+      .then(res => { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+      .then(data => {
+        let info;
+        if (Array.isArray(data) && data[0] && data[0].commit && data[0].commit.committer) {
+          const iso = data[0].commit.committer.date;
+          info = { short: formatDateShort(iso), long: formatDateLong(iso), ts: new Date(iso).getTime() };
+        } else {
+          info = { short: "—", long: "không rõ", ts: 0 };
+        }
+        modifiedCache.set(path, info);
+        return info;
+      })
+      .catch(() => {
+        // không cache lỗi vĩnh viễn — trả về tạm thời, thử lại được ở lần tải sau
+        return { short: "⚠︎", long: "không tải được (có thể do giới hạn tốc độ GitHub API)", ts: 0 };
+      });
+    pendingFetches.set(path, p);
+    p.finally(() => pendingFetches.delete(path));
+    return p;
+  }
+
+  function pumpModifiedQueue() {
+    while (activeFetches < MAX_CONCURRENT_FETCH && modifiedQueue.length) {
+      const { path, cellEl } = modifiedQueue.shift();
+      if (!cellEl.isConnected) continue; // hàng đã bị gỡ khỏi DOM (đổi thư mục/sort) — bỏ qua
+      activeFetches++;
+      fetchModifiedInfo(path).then(info => {
+        if (cellEl.isConnected) {
+          cellEl.textContent = info.short;
+          cellEl.title = info.long;
+        }
+      }).finally(() => { activeFetches--; pumpModifiedQueue(); });
+    }
+  }
+
+  function requestModified(path, cellEl) {
+    if (modifiedCache.has(path)) {
+      const info = modifiedCache.get(path);
+      cellEl.textContent = info.short;
+      cellEl.title = info.long;
+      return;
+    }
+    modifiedQueue.push({ path, cellEl });
+    pumpModifiedQueue();
+  }
+
+  // chỉ tải ngày sửa cho những dòng đang thực sự hiện trên màn hình
+  const modifiedObserver = "IntersectionObserver" in window
+    ? new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            modifiedObserver.unobserve(entry.target);
+            requestModified(entry.target.dataset.path, entry.target);
+          }
+        });
+      }, { rootMargin: "300px 0px" })
+    : null;
+
   function sortEntries(children) {
     return Object.values(children).sort((a, b) => {
       if (a.type !== b.type) return a.type === "dir" ? -1 : 1; // thư mục luôn ở trên
@@ -152,6 +232,10 @@
         cmp = (a.size || 0) - (b.size || 0);
       } else if (sortKey === "type") {
         cmp = typeLabel(a).localeCompare(typeLabel(b), "vi") || a.name.localeCompare(b.name, "vi");
+      } else if (sortKey === "modified") {
+        const ta = (modifiedCache.get(a.path) || {}).ts || 0;
+        const tb = (modifiedCache.get(b.path) || {}).ts || 0;
+        cmp = ta - tb;
       }
       return cmp * sortDir;
     });
@@ -170,12 +254,13 @@
   }
 
   // ---------- row + header builder ----------
-  function makeRow({ icon, cls, name, type, size, onClick }) {
+  function makeRow({ icon, cls, name, type, size, path, onClick }) {
     const row = document.createElement("button");
     row.className = "row " + cls;
     row.innerHTML = `
       <span class="row-icon">${icon}</span>
       <span class="row-name"></span>
+      <span class="row-modified">${path ? "…" : ""}</span>
       <span class="row-type"></span>
       <span class="row-size"></span>
     `;
@@ -183,6 +268,20 @@
     row.querySelector(".row-type").textContent = type || "";
     row.querySelector(".row-size").textContent = size || "";
     row.addEventListener("click", onClick);
+
+    if (path) {
+      const modEl = row.querySelector(".row-modified");
+      modEl.dataset.path = path;
+      if (modifiedCache.has(path)) {
+        const info = modifiedCache.get(path);
+        modEl.textContent = info.short;
+        modEl.title = info.long;
+      } else if (modifiedObserver) {
+        modifiedObserver.observe(modEl);
+      } else {
+        requestModified(path, modEl);
+      }
+    }
     return row;
   }
 
@@ -197,6 +296,7 @@
     header.innerHTML = `
       <span class="col-icon"></span>
       <button class="col-btn col-name" data-key="name">Tên${sortArrow("name")}</button>
+      <button class="col-btn col-modified" data-key="modified">Sửa đổi${sortArrow("modified")}</button>
       <button class="col-btn col-type" data-key="type">Loại${sortArrow("type")}</button>
       <button class="col-btn col-size" data-key="size">Kích thước${sortArrow("size")}</button>
     `;
@@ -255,6 +355,7 @@
           name: item.name + "/",
           type: "Thư mục",
           size: c.files + " tệp",
+          path: item.path,
           onClick: () => showFolder(item.path)
         }));
       } else {
@@ -264,6 +365,7 @@
           name: item.name,
           type: typeLabel(item),
           size: humanSize(item.size),
+          path: item.path,
           onClick: () => showFile(item)
         }));
       }
@@ -317,6 +419,11 @@
       if (sortKey === "name") cmp = a.path.localeCompare(b.path, "vi");
       else if (sortKey === "size") cmp = (a.size || 0) - (b.size || 0);
       else if (sortKey === "type") cmp = typeLabel(a).localeCompare(typeLabel(b), "vi");
+      else if (sortKey === "modified") {
+        const ta = (modifiedCache.get(a.path) || {}).ts || 0;
+        const tb = (modifiedCache.get(b.path) || {}).ts || 0;
+        cmp = ta - tb;
+      }
       return cmp * sortDir;
     });
 
@@ -330,6 +437,7 @@
           name: item.path,
           type: typeLabel(item),
           size: item.type === "dir" ? "" : humanSize(item.size),
+          path: item.path,
           onClick: () => item.type === "dir" ? showFolder(item.path) : showFile(item)
         }));
       });
@@ -396,37 +504,6 @@
     }
   }
 
-  function formatDate(iso) {
-    try {
-      const d = new Date(iso);
-      return d.toLocaleString("vi-VN", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" });
-    } catch (e) { return iso; }
-  }
-
-  async function loadLastModified(path, targetEl) {
-    if (commitDateCache.has(path)) {
-      targetEl.textContent = commitDateCache.get(path) || "không rõ";
-      return;
-    }
-    try {
-      const url = `https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${encodePath(path)}&sha=${BRANCH}&per_page=1`;
-      const res = await fetch(url, { headers: { Accept: "application/vnd.github.v3+json" } });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const data = await res.json();
-      if (Array.isArray(data) && data[0] && data[0].commit && data[0].commit.committer) {
-        const label = formatDate(data[0].commit.committer.date);
-        commitDateCache.set(path, label);
-        targetEl.textContent = label;
-      } else {
-        commitDateCache.set(path, null);
-        targetEl.textContent = "không rõ";
-      }
-    } catch (e) {
-      commitDateCache.set(path, null);
-      targetEl.textContent = "không tải được";
-    }
-  }
-
   function fileViewShell(item, urls) {
     mainEl.innerHTML = "";
     const wrap = document.createElement("div");
@@ -447,10 +524,15 @@
     info.className = "file-info";
     const dateSpan = document.createElement("span");
     dateSpan.className = "file-info-date";
-    dateSpan.textContent = "đang tải…";
     info.innerHTML = `<span>Kích thước: <strong>${humanSize(item.size)}</strong></span><span class="dot">·</span><span>Loại: <strong>${typeLabel(item)}</strong></span><span class="dot">·</span><span>Cập nhật lần cuối: </span>`;
     info.appendChild(dateSpan);
-    loadLastModified(item.path, dateSpan);
+    if (modifiedCache.has(item.path)) {
+      const c = modifiedCache.get(item.path);
+      dateSpan.textContent = c.long;
+    } else {
+      dateSpan.textContent = "đang tải…";
+      fetchModifiedInfo(item.path).then(c => { dateSpan.textContent = c.long; });
+    }
 
     const actions = document.createElement("div");
     actions.className = "file-actions";
