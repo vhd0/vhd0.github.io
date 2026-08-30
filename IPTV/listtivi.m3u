@@ -169,9 +169,9 @@ https://vips-livecdn.fptplay.net/live/media/vtv10/live247-hls-avc/index.m3u8
 https://dethich.pw/vtv10/index.m3u8
 #EXTINF:-1 tvg-id="htv1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/HTV1.png/960px-HTV1.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV1
 https://dethich.pw/htv1/index.m3u8
-#EXTINF:-1 tvg-id="htv2hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d2/HTV2_-_Vie_Channel.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV2 - Vie Channel
+#EXTINF:-1 tvg-id="htv2hd" tvg-logo="https://epg.io.vn/logos/33.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV2 - Vie Channel
 https://dethich.pw/htv2/index.m3u8
-#EXTINF:-1 tvg-id="htv3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/65/HTV3-2018.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV3
+#EXTINF:-1 tvg-id="htv3" tvg-logo="https://epg.io.vn/logos/34.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV3
 https://dethich.pw/htv3/index.m3u8
 #EXTINF:-1 tvg-id="htv4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HTV4_logo.webp/960px-HTV4_logo.webp.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV4
 https://freem3u.xyz/api/live/play.m3u8?vid=9
@@ -407,11 +407,11 @@ http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=22872
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=228724&extension=ts&play_token=TJrfSv76Xi
 #EXTINF:-1 tvg-id="mutv" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1834.png" group-title="⚽| Thể thao quốc tế",MUTV
 http://line.ciao-ott.net:80/play/live.php?mac=00:1A:79:C8:7B:30&stream=1312824&extension=ts&play_token=3ouilCRXf9
-#EXTINF:-1 tvg-id="polsatsport1" group-title="⚽| Thể thao quốc tế",Polsat Sport 1
+#EXTINF:-1 tvg-id="polsatsport1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Polsat_Sport_1_2024.svg/500px-Polsat_Sport_1_2024.svg.png" group-title="⚽| Thể thao quốc tế",Polsat Sport 1
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1729162&extension=ts&play_token=9JXfYd9pyq
 #EXTINF:-1 tvg-id="polsatsport2" tvg-logo="https://ipla-e2-42.pluscdn.pl/p/cms_thumbnails/qx/qxn4b9d2175hjjvvy4ehpa92nztaynba.png" group-title="⚽| Thể thao quốc tế",Polsat Sport 2
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1729164&extension=ts&play_token=vFbihF9Rmr
-#EXTINF:-1 tvg-id="polsatsport3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Polsat_Sport_3_2024.svg/500px-Polsat_Sport_3_2024.svg.png" group-title="⚽| Thể thao quốc tế",Polsat Sport 3
+#EXTINF:-1 tvg-id="polsatsport3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Polsat_Sport_3_2024.svg/250px-Polsat_Sport_3_2024.svg.png" group-title="⚽| Thể thao quốc tế",Polsat Sport 3
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1729168&extension=ts&play_token=ThvjYQPppG
 #EXTINF:-1 tvg-id="tycsportargentina" tvg-logo="https://television.com.ar/wp-content/uploads/2024/01/276279.jpg" group-title="⚽| Thể thao quốc tế",Tyc Sport Argentina
 http://line.ciao-ott.net:80/play/live.php?mac=00:1A:79:C8:7B:30&stream=1090606&extension=ts&play_token=UU20nTSWow
@@ -638,7 +638,7 @@ https://live.fptplay53.net/fnxhd1/airanghd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="afnhd" tvg-logo="https://i.imgur.com/pux6WN8.png" group-title="Quốc Tế",Asian Food Network
 #EXTVLCOPT:http-user-agent=VThanhTivi
 https://live.fptplay53.net/fnxhd2/afchd_vhls.smil/chunklist_b5000000.m3u8
-#EXTINF:-1 tvg-id="axnhd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Quốc Tế",AXN
+#EXTINF:-1 tvg-id="axnhd" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/axn.png" group-title="Quốc Tế",AXN
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -778,7 +778,7 @@ https://live.fptplay53.net/fnxhd2/nhkworld_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="outdoorhd" tvg-logo="https://i.imgur.com/Kh4MWaY.png" group-title="Quốc Tế",Outdoor Channel
 #EXTVLCOPT:http-user-agent=VThanhTivi
 https://live.fptplay53.net/epzhd2/outdoorfhd_vhls.smil/chunklist_b5000000.m3u8
-#EXTINF:-1 tvg-id="tlchd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/1280px-TLC_Logo.svg.png" group-title="Quốc Tế",Travel Living
+#EXTINF:-1 tvg-id="tlchd" tvg-logo="https://epg.io.vn/logos/168.png" group-title="Quốc Tế",Travel Living
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
