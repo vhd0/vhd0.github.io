@@ -1,2 +1,2 @@
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:18007?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=raw#JP | 01
+vless://ec13817e-790e-4eab-b287-0d94edd28750@103.76.85.49:443?flow=xtls-rprx-vision&fp=firefox&pbk=jp4bv75imDovZ58AQZPGJwQidhqU5ikkCC147xOKwX8&security=reality&sid=44713534120e5151&sni=www.apple.com&type=tcp#JP | 01
 vless://9fc6444b-987a-41d5-9bf5-195d147e0a05@206.251.54.34:55596?flow=xtls-rprx-vision&fp=firefox&pbk=QQUHUyF5Wb3XeRRrky-WOaRTxBtHokNaMec02HURWSI&security=reality&sid=6ac09686189038&sni=www.amd.com&type=raw#JP | 02
