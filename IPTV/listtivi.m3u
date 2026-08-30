@@ -606,20 +606,6 @@ https://livevliatmcdw.seenow.vn/live/data8/SKSS1/Live_DASHDRM/SKSS1.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ca0576ec419f490789860894bb50c977:25d2e703eee38718240e7038d1908fef
 https://livevliatmcdw.seenow.vn/live/data8/SKSS2/Live_DASHDRM/SKSS2.mpd
-#EXTINF:-1 tvg-id="conganhanoivscongantp.hcm" tvg-logo="https://images.fptplay53.net/media/home_event/OTT_ECS/2026/08/30/sieu-cup-qg---slide-thumb_1788064147578.jpg" group-title="Sự Kiện FPT PLAY",Công An Hà Nội vs Công An TP.HCM
-https://vips-livecdn.fptplay.net/live/media/su-kien-01-4k/dash_hvc/index.mpd
-#EXTINF:-1 tvg-id="conganhanoivscongantp.hcm" tvg-logo="https://images.fptplay53.net/media/home_event/OTT_ECS/2026/08/30/sieu-cup-qg---slide-thumb_1788064147578.jpg" group-title="Sự Kiện FPT PLAY",Công An Hà Nội vs Công An TP.HCM [Du phong 1]
-https://vips-livecdn.fptplay.net/live/media/su-kien-01-4k/hls_avc_v6/index.m3u8?sign=1788084802-MDc1OTczMzQ-0-4d42253792f9226a004eadabf53aece1
-#EXTINF:-1 tvg-id="event3" tvg-logo="https://images.fptplay53.net/media/home_event/OTT_ECS/2026/08/30/golf-dp-world-tour-british-masters-2026---slide-thumb_1788081936422.jpg" group-title="Sự Kiện FPT PLAY",Event 3
-https://vips-livecdn.fptplay.net/live/media/event-03/hls_avc_v6/index.m3u8
-#EXTINF:-1 tvg-id="event5" tvg-logo="https://images.fptplay53.net/media/home_event/OTT_ECS/2026/08/29/30_1787948027308.jpg" group-title="Sự Kiện FPT PLAY",Event 5
-https://vips-livecdn.fptplay.net/live/media/event-05/hls_avc_v6/index.m3u8
-#EXTINF:-1 tvg-id="hanoibuffaloesvssaigonheat" tvg-logo="https://images.fptplay53.net/media/home_event/OTT_ECS/2026/08/28/live-vba-2026-slide-thumb_1787896701125.jpg" group-title="Sự Kiện FPT PLAY",Hanoi Buffaloes vs Saigon Heat
-https://vips-livecdn.fptplay.net/live/media/event-01-4k/dash_hvc/index.mpd
-#EXTINF:-1 tvg-id="hanoibuffaloesvssaigonheat" tvg-logo="https://images.fptplay53.net/media/home_event/OTT_ECS/2026/08/28/live-vba-2026-slide-thumb_1787896701125.jpg" group-title="Sự Kiện FPT PLAY",Hanoi Buffaloes vs Saigon Heat [Du phong 1]
-https://vips.fptplay.net/live/media/event-01-4k/hls_avc_v6/index.m3u8?sign=1788089305-MDc1OTczMzQ-0-32a094994ea8d6e84889c73d699a9858
-#EXTINF:-1 tvg-id="sukien3" tvg-logo="https://images.fptplay53.net/media/home_event/OTT_ECS/2026/08/29/30_1787947722461.jpg" group-title="Sự Kiện FPT PLAY",Sự Kiện 3
-https://fbox-livecdn.fptplay.net/live/media/su-kien-03/hls_hvc/index.m3u8
 #EXTINF:-1 tvg-id="abcaustralia" tvg-logo="https://i.imgur.com/qQ33TVM.png" group-title="Quốc Tế",ABC Australia
 #EXTVLCOPT:http-user-agent=VThanhTivi
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
@@ -690,7 +676,7 @@ https://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/cn.smil/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b1f0d759e914369db388b3b0dc815971:5678d317e17007a88a9b9539e4526512
 https://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/boomerang.smil/manifest.mpd
-#EXTINF:-1 tvg-id="cgtn" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/CGTN.svg/960px-CGTN.svg.png" group-title="Quốc Tế",CGTN
+#EXTINF:-1 tvg-id="cgtn" tvg-logo="https://i.ytimg.com/vi/twB_6GV5AM8/hq720.jpg" group-title="Quốc Tế",CGTN
 https://english-livebkali.cgtn.com/live/encgtn_0.m3u8
 #EXTINF:-1 tvg-id="cgtndocu" tvg-logo="https://i.imgur.com/JHv0WxM.png" group-title="Quốc Tế",CGTN Documentary
 https://english-livebkali.cgtn.com/live/doccgtn_0.m3u8
@@ -780,13 +766,13 @@ https://live.fptplay53.net/fnxhd2/nhkworld_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="outdoorhd" tvg-logo="https://i.imgur.com/Kh4MWaY.png" group-title="Quốc Tế",Outdoor Channel
 #EXTVLCOPT:http-user-agent=VThanhTivi
 https://live.fptplay53.net/epzhd2/outdoorfhd_vhls.smil/chunklist_b5000000.m3u8
-#EXTINF:-1 tvg-id="tlchd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/1280px-TLC_Logo.svg.png" group-title="Quốc Tế",Travel Living
+#EXTINF:-1 tvg-id="tlchd" tvg-logo="https://epg.io.vn/logos/168.png" group-title="Quốc Tế",Travel Living
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b6908629732639ada4814a6208296d9c:7ca9bf03623f77b5e2f16df0b53f274d
 https://s129135.cdn.mytvnet.vn/pkg20/live_dzones/tlc.smil/manifest.mpd
-#EXTINF:-1 tvg-id="trtworld" tvg-logo="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/425e1955860511.59ae62ac642ba.png" group-title="Quốc Tế",TRT World
+#EXTINF:-1 tvg-id="trtworld" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRT_World.svg/960px-TRT_World.svg.png" group-title="Quốc Tế",TRT World
 https://tv-trtworld.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-id="tv5monde" tvg-logo="https://i.imgur.com/WmRbudc.png" group-title="Quốc Tế",TV5MONDE
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
