@@ -169,9 +169,9 @@ https://vips-livecdn.fptplay.net/live/media/vtv10/live247-hls-avc/index.m3u8
 https://dethich.pw/vtv10/index.m3u8
 #EXTINF:-1 tvg-id="htv1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/HTV1.png/960px-HTV1.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV1
 https://dethich.pw/htv1/index.m3u8
-#EXTINF:-1 tvg-id="htv2hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d2/HTV2_-_Vie_Channel.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV2 - Vie Channel
+#EXTINF:-1 tvg-id="htv2hd" tvg-logo="https://epg.io.vn/logos/33.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV2 - Vie Channel
 https://dethich.pw/htv2/index.m3u8
-#EXTINF:-1 tvg-id="htv3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/65/HTV3-2018.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV3
+#EXTINF:-1 tvg-id="htv3" tvg-logo="https://epg.io.vn/logos/34.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV3
 https://dethich.pw/htv3/index.m3u8
 #EXTINF:-1 tvg-id="htv4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HTV4_logo.webp/960px-HTV4_logo.webp.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/HTV_Logo.png" group-title="HTV",HTV4
 https://freem3u.xyz/api/live/play.m3u8?vid=9
@@ -353,13 +353,13 @@ https://freem3u.xyz/api/live/play.m3u8?vid=179
 https://freem3u.xyz/api/live/play.m3u8?vid=188
 #EXTINF:-1 tvg-id="onmovies" tvg-logo="https://epg.io.vn/logos/15.png" group-logo="https://epg.io.vn/logos/29.png" group-title="ON",ON Movies
 https://freem3u.xyz/api/live/play.m3u8?vid=181
-#EXTINF:-1 tvg-id="onviedrama" group-logo="https://epg.io.vn/logos/29.png" group-title="ON",ON Vie Drama
+#EXTINF:-1 tvg-id="onviedrama" tvg-logo="https://i.ibb.co/VptvgFVx/IMG-2530.webp" group-logo="https://epg.io.vn/logos/29.png" group-title="ON",ON Vie Drama
 http://dvrfl05.bozztv.com/vch_vchannel18/index.m3u8
 #EXTINF:-1 tvg-id="canal+sport" tvg-logo="https://i.imgur.com/PtzoOQL.png" group-title="THỂ THAO QUỐC TẾ",Canal+ Sport
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=958758&extension=ts&play_token=MskDtCSrpn
-#EXTINF:-1 tvg-id="skysportf1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Sky_Sport_F1_-_Logo_2020.svg/960px-Sky_Sport_F1_-_Logo_2020.svg.png" group-title="THỂ THAO QUỐC TẾ",Sky Sport F1
+#EXTINF:-1 tvg-id="skysportf1" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/p5csyn1620551587.png" group-title="THỂ THAO QUỐC TẾ",Sky Sport F1
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1149423&extension=ts&play_token=1jkVQWGCqc
-#EXTINF:-1 tvg-id="skysporttennis" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Sky_Sport_Tennis.svg/960px-Sky_Sport_Tennis.svg.png" group-title="THỂ THAO QUỐC TẾ",Sky Sport Tennis
+#EXTINF:-1 tvg-id="skysporttennis" tvg-logo="https://e0.365dm.com/24/01/2048x1152/skysports-sky-sports-tennis_6437040.jpg" group-title="THỂ THAO QUỐC TẾ",Sky Sport Tennis
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1149433&extension=ts&play_token=Y1kv3yxPS8
 #EXTINF:-1 tvg-id="tntsports14mbpsfor4g" tvg-logo="https://media.info/l/o/1/1539.1690027797.png" group-title="THỂ THAO QUỐC TẾ",TNT Sports 1 4Mbps for 4G
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=894977&extension=ts&play_token=W2HvDO5iES
@@ -629,7 +629,7 @@ https://fbox-livecdn.fptplay.net/live/media/su-kien-03/hls_hvc/index.m3u8
 https://s935.cdn.mytvnet.vn/pkg20/live_dzones/aplus.smil/manifest.mpd
 #EXTINF:-1 tvg-id="aljazeeraenglish" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/1280px-Aljazeera_eng.svg.png" group-title="Quốc Tế",Al Jazeera English
 https://live-hls-web-aje-gcp.thehlive.com/AJE/01.m3u8
-#EXTINF:-1 tvg-id="animalhd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png" group-title="Quốc Tế",Animal Planet
+#EXTINF:-1 tvg-id="animalhd" tvg-logo="https://vnepg.site/logos/143.png" group-title="Quốc Tế",Animal Planet
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -786,7 +786,7 @@ https://live.fptplay53.net/epzhd2/outdoorfhd_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b6908629732639ada4814a6208296d9c:7ca9bf03623f77b5e2f16df0b53f274d
 https://s129135.cdn.mytvnet.vn/pkg20/live_dzones/tlc.smil/manifest.mpd
-#EXTINF:-1 tvg-id="trtworld" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRT_World.svg/960px-TRT_World.svg.png" group-title="Quốc Tế",TRT World
+#EXTINF:-1 tvg-id="trtworld" tvg-logo="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/425e1955860511.59ae62ac642ba.png" group-title="Quốc Tế",TRT World
 https://tv-trtworld.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-id="tv5monde" tvg-logo="https://i.imgur.com/WmRbudc.png" group-title="Quốc Tế",TV5MONDE
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
