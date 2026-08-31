@@ -615,7 +615,7 @@ https://livevliatmcdw.seenow.vn/live/data8/SKSS2/Live_DASHDRM/SKSS2.mpd
 https://s935.cdn.mytvnet.vn/pkg20/live_dzones/aplus.smil/manifest.mpd
 #EXTINF:-1 tvg-id="aljazeeraenglish" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/1280px-Aljazeera_eng.svg.png" group-title="Quốc Tế",Al Jazeera English
 https://live-hls-web-aje-gcp.thehlive.com/AJE/01.m3u8
-#EXTINF:-1 tvg-id="animalhd" tvg-logo="https://vnepg.site/logos/143.png" group-title="Quốc Tế",Animal Planet
+#EXTINF:-1 tvg-id="animalhd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png" group-title="Quốc Tế",Animal Planet
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -626,7 +626,7 @@ https://live.fptplay53.net/fnxhd1/airanghd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="afnhd" tvg-logo="https://i.imgur.com/pux6WN8.png" group-title="Quốc Tế",Asian Food Network
 #EXTVLCOPT:http-user-agent=VThanhTivi
 https://live.fptplay53.net/fnxhd2/afchd_vhls.smil/chunklist_b5000000.m3u8
-#EXTINF:-1 tvg-id="axnhd" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/axn.png" group-title="Quốc Tế",AXN
+#EXTINF:-1 tvg-id="axnhd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Quốc Tế",AXN
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -772,7 +772,7 @@ https://live.fptplay53.net/epzhd2/outdoorfhd_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b6908629732639ada4814a6208296d9c:7ca9bf03623f77b5e2f16df0b53f274d
 https://s129135.cdn.mytvnet.vn/pkg20/live_dzones/tlc.smil/manifest.mpd
-#EXTINF:-1 tvg-id="trtworld" tvg-logo="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/425e1955860511.59ae62ac642ba.png" group-title="Quốc Tế",TRT World
+#EXTINF:-1 tvg-id="trtworld" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRT_World.svg/960px-TRT_World.svg.png" group-title="Quốc Tế",TRT World
 https://tv-trtworld.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-id="tv5monde" tvg-logo="https://i.imgur.com/WmRbudc.png" group-title="Quốc Tế",TV5MONDE
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
