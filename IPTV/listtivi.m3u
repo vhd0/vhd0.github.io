@@ -47,9 +47,6 @@ https://freem3u.xyz/api/live/play.m3u8?vid=180
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/onbibi.png" group-title="📡 VTVCab",On BiBi
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://freem3u.xyz/api/live/play.m3u8?vid=178
-#EXTINF:-1 tvg-id="ongolf" tvg-logo="https://img.lichphatsong.site/logo/on-golf.jpg" group-title="📡 VTVCab",On Golf
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=vtvcab-23-golf-channel
 #EXTINF:-1 tvg-id="onkids" tvg-logo="https://assets-vtvcab.gviet.vn/images/v2/channel/20220613/2022061306/onkids5_1675158859.webp" group-title="📡 VTVCab",On Kids
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://freem3u.xyz/api/live/play.m3u8?vid=179
@@ -137,6 +134,9 @@ https://live.canthotv.vn/cs3/tv/chunklist_w1003748170.m3u8
 https://freem3u.xyz/api/live/play.m3u8?vid=51
 #EXTINF:-1 tvg-id="daklak" tvg-logo="https://img-zlr1.tv360.vn/image1/2025/06/30/11/1751256466336/bda77a407209_640_360.png" group-title="🏠 Địa phương",DRT - Báo và PTTH Đắk Lắk [Dự phòng]
 https://cdn.drt.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8
+#EXTINF:-1 tvg-id="gialai" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/GTVGIALAI.png" group-title="🏠 Địa phương",GTV - Báo và PTTH Gia Lai
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://vmttv.dpdns.org/tv360/?id=gia-lai
 #EXTINF:-1 tvg-id="hungyen" tvg-logo="https://hungyentv.vn/templates/frontend/hytv/Assets/img/truyenhinh.jpg" group-title="🏠 Địa phương",HYTV - Báo và PTTH Hưng Yên
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://vmttv.dpdns.org/tv360/?id=hung-yen
@@ -148,6 +148,9 @@ https://vmttv.dpdns.org/tv360/?id=hitv
 #EXTINF:-1 tvg-id="khanhhoa1" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/KTV1_KhanhHoa.png" group-title="🏠 Địa phương",KTV1 - Báo và PTTH Khánh Hòa
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://vmttv.dpdns.org/tv360/?id=khanh-hoa-1
+#EXTINF:-1 tvg-id="khanhhoa" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/KTV_KhanhHoa.png" group-title="🏠 Địa phương",KTV - Báo và PTTH Khánh Hòa
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://vmttv.dpdns.org/tv360/?id=khanh-hoa
 #EXTINF:-1 tvg-id="langson" tvg-logo="https://langsontv.vn/templates/frontend/lstv/Assets/img/video_bg.png" group-title="🏠 Địa phương",LSTV - Báo và PTTH Lạng Sơn
 https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
 #EXTINF:-1 tvg-id="langson" tvg-logo="https://langsontv.vn/templates/frontend/lstv/Assets/img/video_bg.png" group-title="🏠 Địa phương",LSTV - Báo và PTTH Lạng Sơn [Dự phòng]
@@ -170,9 +173,6 @@ https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8
 https://freem3u.xyz/api/live/play.m3u8?vid=74
 #EXTINF:-1 tvg-id="nghean" tvg-logo="https://img-zlr1.tv360.vn/image1/2020_09_23/1600821989411/75bfb004e210_640_360.png" group-title="🏠 Địa phương",NTV - Báo và PTTH Nghệ An [Dự phòng]
 https://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/playlist.m3u8
-#EXTINF:-1 tvg-id="phutho" tvg-logo="https://img-zlr1.tv360.vn/image1/2023/05/16/02/168417957456/7016ca1be5fa_640_360.png" group-title="🏠 Địa phương",PTV - Báo và PTTH Phú Thọ
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=phu-tho
 #EXTINF:-1 tvg-id="quangngai" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/QNgTV1_QuangNgai.png" group-title="🏠 Địa phương",QNgTV1 - Báo và PTTH Quảng Ngãi
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://freem3u.xyz/api/live/play.m3u8?vid=81
@@ -313,24 +313,26 @@ https://multi-playlist-zmp3.zmdcdn.me/9tPzLPYORS8/zhls/playback-realtime/a07d79b
 #EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/15/22/177626841934/e289a43bd190_640_360.png" group-title="⚽ Thể thao",360 C1 Châu Âu
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://vmttv.dpdns.org/tv360/?id=360-c1-chau-au
-#EXTINF:-1 tvg-logo="https://s1.dmcdn.net/v/JjNMw1Z-Js5kwK7KN/x720" group-title="⚽ Thể thao",CANAL+ LIVE 1
-http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=941442&extension=ts&play_token=6sw55uPREH
-#EXTINF:-1 tvg-logo="https://s1.dmcdn.net/v/JjNMw1Z-Js5kwK7KN/x720" group-title="⚽ Thể thao",CANAL+ LIVE 9
-http://line.ciao-ott.net:80/play/live.php?mac=00:1A:79:C8:7B:30&stream=941470&extension=ts&play_token=10cpSzSEsB
+#EXTINF:-1 tvg-logo="https://s1.dmcdn.net/v/JjNMw1Z-Js5kwK7KN/x720" group-title="⚽ Thể thao",CANAL+ LIVE 8
+http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=941468&extension=ts&play_token=oLegwjYDD5
+#EXTINF:-1 tvg-logo="https://s1.dmcdn.net/v/JjNMw1Z-Js5kwK7KN/x720" group-title="⚽ Thể thao",CANAL+ LIVE 10
+http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=941470&extension=ts&play_token=2SQs9dSZmM
+#EXTINF:-1 tvg-logo="https://s1.dmcdn.net/v/JjNMw1Z-Js5kwK7KN/x720" group-title="⚽ Thể thao",CANAL+ LIVE 11
+http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=941471&extension=ts&play_token=ReuCTADsrG
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/eb/Canal%2BFoot.png" group-title="⚽ Thể thao",Canal+ Foot
+http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=941405&extension=ts&play_token=ODWyLygMWo
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/1a/Canal%2B_Sport_2015.png" group-title="⚽ Thể thao",Canal+ Sport
+http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=958758&extension=ts&play_token=MskDtCSrpn
 #EXTINF:-1 tvg-id="htvsports.vn@sd" group-title="⚽ Thể thao",HTV Thể thao
 https://dethich.pw/htvthethao/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/MONOMAX_Sports_2026.svg/500px-MONOMAX_Sports_2026.svg.png" group-title="⚽ Thể thao",MONOMAX SPORT
 http://3bb.engatetv.com:25461/hstn/line/14
-#EXTINF:-1 tvg-logo="https://m.media-amazon.com/images/I/611NwkDJjOL.png" group-title="⚽ Thể thao",MUTV
-http://line.ciao-ott.net:80/play/live.php?mac=00:1A:79:C8:7B:30&stream=1312824&extension=ts&play_token=3ouilCRXf9
 #EXTINF:-1 tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/8qhlj81641505795.png" group-title="⚽ Thể thao",Max Sport 2
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=228726&extension=ts&play_token=1WFblY6SIm
-#EXTINF:-1 tvg-id="skyf1" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/p5csyn1620551587.png" group-title="⚽ Thể thao",Sky Sport F1
-http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1149423&extension=ts&play_token=1jkVQWGCqc
+#EXTINF:-1 tvg-id="tnt1" tvg-logo="https://media.info/l/o/1/1539.1690027797.png" group-title="⚽ Thể thao",TNT Sports 1 4Mbps for 4G
+http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=894977&extension=ts&play_token=W2HvDO5iES
 #EXTINF:-1 tvg-id="tnt2" tvg-logo="https://media.info/l/o/1/1540.1690027877.png" group-title="⚽ Thể thao",TNT Sports 2 4Mbps for 4G
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1091517&extension=ts&play_token=zKzxFKTNmb
-#EXTINF:-1 tvg-logo="https://television.com.ar/wp-content/uploads/2024/01/276279.jpg" group-title="⚽ Thể thao",Tyc Sport Argentina
-http://line.ciao-ott.net:80/play/live.php?mac=00:1A:79:C8:7B:30&stream=1090606&extension=ts&play_token=UU20nTSWow
 #EXTINF:-1 tvg-id="cartoonhd" tvg-logo="https://freight.cargo.site/w/1200/i/3cf72163d993c4d87263e6d4990ec4ccdd1e14b09ce89e6e35dee1de83ef4985/CN.jpg" group-title="👶 Thiếu nhi",Cartoon Network
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -853,6 +855,9 @@ https://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/ftv.smil/manifest.mpd
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1084668&extension=ts&play_token=onuPSPIV6o
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/G1_broadcasting_logo.svg/250px-G1_broadcasting_logo.svg.png" group-title="📦 Khác",G1 SBS
 http://61.82.49.4:1935/live/_definst_/tv.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="gialai" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/GTVGIALAI.png" group-title="📦 Khác",GTV - Báo và PTTH Gia Lai
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://vmttv.dpdns.org/tv360/?id=gia-lai
 #EXTINF:-1 tvg-id="htv1.vn@sd" group-title="📦 Khác",HTV1
 https://dethich.pw/htv1/index.m3u8
 #EXTINF:-1 tvg-id="htv2.vn@sd" group-title="📦 Khác",HTV2
@@ -884,6 +889,9 @@ https://freem3u.xyz/api/live/play.m3u8?vid=213
 #EXTINF:-1 tvg-id="khanhhoa1" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/KTV1_KhanhHoa.png" group-title="📦 Khác",KTV1 - Báo và PTTH Khánh Hòa
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://vmttv.dpdns.org/tv360/?id=khanh-hoa-1
+#EXTINF:-1 tvg-id="khanhhoa" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/KTV_KhanhHoa.png" group-title="📦 Khác",KTV - Báo và PTTH Khánh Hòa
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://vmttv.dpdns.org/tv360/?id=khanh-hoa
 #EXTINF:-1 tvg-id="khanhhoatv.vn@sd" group-title="📦 Khác",Khanh Hoa TV
 https://cdnbaokhanhhoa.com/live/1332e3a79e27.m3u8?vhost=video
 #EXTINF:-1 tvg-id="langson" tvg-logo="https://langsontv.vn/templates/frontend/lstv/Assets/img/video_bg.png" group-title="📦 Khác",LSTV - Báo và PTTH Lạng Sơn
@@ -933,9 +941,6 @@ https://cdnbaokhanhhoa.com/live/90405a889081.m3u8?vhost=video
 https://freem3u.xyz/api/live/play.m3u8?vid=188
 #EXTINF:-1 tvg-logo="https://image.makewebcdn.com/makeweb/m_1920x0/fwsVrxqVa/3PPTV36/PPTV_By_HSTN.jpg" group-title="📦 Khác",PPTV36
 http://3bb.engatetv.com:25461/hstn/line/21
-#EXTINF:-1 tvg-id="phutho" tvg-logo="https://img-zlr1.tv360.vn/image1/2023/05/16/02/168417957456/7016ca1be5fa_640_360.png" group-title="📦 Khác",PTV - Báo và PTTH Phú Thọ
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=phu-tho
 #EXTINF:-1 tvg-id="quangngai" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/QNgTV1_QuangNgai.png" group-title="📦 Khác",QNgTV1 - Báo và PTTH Quảng Ngãi
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://freem3u.xyz/api/live/play.m3u8?vid=81
@@ -1050,6 +1055,8 @@ https://str.vov.gov.vn/vovlive/vovGTHCM.sdp_aac/chunklist_w1213978008.m3u8
 #EXTINF:-1 tvg-id="vovgthcm" tvg-logo="https://foxxradio.com/upload/vi/1671787823.png.webp" group-title="📦 Khác",VOV Giao thông Hồ Chí Minh [Dự phòng]
 https://play.vovgiaothong.vn/live/gthcm/playlist.m3u8
 #EXTINF:-1 tvg-id="vtv1.vn@hd" group-title="📦 Khác",VTV1
+https://vtvgolive-vtv.vtvdigital.vn/livestream/digital_04-1080p.m3u8
+#EXTINF:-1 tvg-id="vtv1.vn@hd" group-title="📦 Khác",VTV1 [Dự phòng]
 https://dethich.pw/vtv1/index.m3u8
 #EXTINF:-1 tvg-id="vtv2.vn@hd" group-title="📦 Khác",VTV2
 http://125hvt.ddns.net:21585/vtv2/playlist.m3u8
