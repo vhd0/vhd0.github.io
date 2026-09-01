@@ -304,6 +304,8 @@ https://dethich.pw/vtv8/index.m3u8
 #EXTINF:-1 tvg-id="vtv9hd" tvg-name="VTV9" group-title="🏠 Địa phương" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/VTV9.png",VTV9
 https://dethich.pw/vtv9/index.m3u8
 #EXTINF:-1 tvg-id="7" tvg-name="7 канал (Красноярск)" group-title="🏠 Địa phương" tvg-logo="https://i.postimg.cc/cvknPRt9/7.png",7 канал (Красноярск)
+http://7channel.iptv2022.com/tracks-v5a1/mono.m3u8
+#EXTINF:-1 tvg-id="7" tvg-name="7 канал (Красноярск)" group-title="🏠 Địa phương" tvg-logo="https://i.postimg.cc/cvknPRt9/7.png",7 канал (Красноярск) [Dự phòng]
 http://fs.uplink.kz/7_kanal/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-id="an giang 1" tvg-name="An Giang 1" group-title="🏠 Địa phương" tvg-logo="https://i.imgur.com/0TkI4Ar.png",An Giang 1
 https://live.fptplay53.net/epzsd1/angiang01_hls.smil/chunklist.m3u8
@@ -1003,6 +1005,8 @@ https://vmttv.dpdns.org/tv360/?id=phim-au-my
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://vmttv.dpdns.org/tv360/?id=360-thieu-nhi
 #EXTINF:-1 tvg-id="7" tvg-name="7 канал (Красноярск)" group-title="🎭 Giải trí" tvg-logo="https://i.postimg.cc/cvknPRt9/7.png",7 канал (Красноярск)
+http://7channel.iptv2022.com/tracks-v5a1/mono.m3u8
+#EXTINF:-1 tvg-id="7" tvg-name="7 канал (Красноярск)" group-title="🎭 Giải trí" tvg-logo="https://i.postimg.cc/cvknPRt9/7.png",7 канал (Красноярск) [Dự phòng]
 http://fs.uplink.kz/7_kanal/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-id="946" tvg-name="7TV" group-title="🎭 Giải trí" tvg-logo="https://i.imgur.com/Wuy9Vtn.png",7TV
 http://v4.proofix.ru/7tv-live/tracks-v1a1/mono.m3u8
