@@ -2,3 +2,4 @@ vmess://eyJhZGQiOiI0Ny4yMzYuMjA3LjI0NSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiZjFiYjI5
 vless://F2987FBA-B653-444D-8057-6B6474E448C6@sg4-r.link-t7.com:10039/?type=grpc&encryption=none&flow=&serviceName=update&sni=d1.awsstatic.com&fp=chrome&security=reality&pbk=wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE&sid=686c0ef0#SG | 02
 trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?allowInsecure=1&sni=ww12.levikogjgfdd.ir&type=tcp#SG | 03
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:17623?flow=xtls-rprx-vision&fp=ios&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#SG | 04
+vless://30523c7b-67f7-4456-b71b-07530b6c350e@5.34.176.233:443?flow=xtls-rprx-vision&fp=chrome&pbk=8G3UWe1qa0Gzv5IRBOkZ4Fg7Fey-sNdUwg_llufDRGI&security=reality&sid=ffc177eeffe88a84&sni=www.cloudflare.com&type=tcp#SG | 05
