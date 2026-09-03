@@ -102,14 +102,14 @@ https://vmttv.dpdns.org/tv360/?id=vtvcab-2-phim-viet-hd
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://tv.vietanhtv.top/sex/cleankey.php?id=tv360170&token=d2a54e0c3eeb9c3e375adb586db46c99
-https://tv.vietanhtv.top/tv360/tv360.php?id=170&expires=1788525328&token=fcb105260a7fca13e633825e7b3a4358
+https://tv.vietanhtv.top/tv360/tv360.php?id=170&expires=1788528927&token=2bc72b89c8b8a3ea25370e30966ab176
 #EXTINF:-1 tvg-id="onsportsplus" tvg-logo="https://assets-vtvcab.gviet.vn/images/hq/posters/onsportscongmoi1.jpg" group-title="📡 VTVCab",ON SPORTS+
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://tv.vietanhtv.top/sex/cleankey.php?id=tv360183&token=d2a54e0c3eeb9c3e375adb586db46c99
-https://tv.vietanhtv.top/tv360/tv360.php?id=183&expires=1788525328&token=d76afb2ab2a54fbd9aba01e62a15e0a1
+https://tv.vietanhtv.top/tv360/tv360.php?id=183&expires=1788528927&token=775e932ab0dcfe40dda06b4306a84dd6
 #EXTINF:-1 tvg-id="on sport" tvg-logo="https://assets-vtvcab.gviet.vn/images/hq/posters/_ports_ng_logo_04202212.jpg" group-title="📡 VTVCab",ON Sports
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=widevine
@@ -986,17 +986,6 @@ http://air.tvk6.ru/tvk24/tracks-v1a1/mono.m3u8
 http://igi-hls.cdnvideo.ru/igi/igi_tcode/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="2473" tvg-logo="https://i.postimg.cc/7ZT8Dj9M/Tolk.png" group-title="📰 Tin tức",Толк
 http://live-tolknews.cdnvideo.ru/tolknews/stream/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/07/30/10/1785382803894/362700e9107b_640_360.png" group-title="🎬 Phim",360 Phim
-https://vmttv.dpdns.org/tv360/?id=360-phim-4k
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/09/08/1775697736867/3854900b7263_640_360.png" group-title="🎬 Phim",360 Phim Hoa Ngữ
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=360-hoa-ngu
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/07/15/1775549899305/f54a93a767c5_640_360.png" group-title="🎬 Phim",360 Phim Việt
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=phim-viet
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/09/08/1775697767861/9a6dc88794cf_640_360.png" group-title="🎬 Phim",360 Phim Âu Mỹ
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=phim-au-my
 #EXTINF:-1 tvg-id="boxmovie1" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/boxmovie1.png" group-title="🎬 Phim",Box Movie 1
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -1034,10 +1023,10 @@ https://livevlisctcdnw.seenow.vn/Live_DASHDRM1/HC/manifest.mpd
 https://freem3u.xyz/api/live/play.m3u8?vid=181
 #EXTINF:-1 tvg-id="tv360phimviet" tvg-logo="https://img-ali1.tv360.vn/image1/2025/12/31/18/1767180734794/7cda83f18b5d_640_360.png" group-title="🎬 Phim",Phim Việt
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://tv.vietanhtv.top/tv360/tv360.php?id=9902&expires=1788525328&token=2ef6cca585679816dcbb151d5b3f7b75
+https://tv.vietanhtv.top/tv360/tv360.php?id=9902&expires=1788528927&token=01fcf50c14f7c572e6f088ede375636e
 #EXTINF:-1 tvg-id="tv360aumy" tvg-logo="https://img-ali1.tv360.vn/image1/2025/03/24/23/1742835081398/4e6776be1efd_640_360.png" group-title="🎬 Phim",Phim Âu Mỹ
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://tv.vietanhtv.top/tv360/tv360.php?id=9903&expires=1788525328&token=40782d0706498eadc23933efdbf5e2fd
+https://tv.vietanhtv.top/tv360/tv360.php?id=9903&expires=1788528927&token=735ccecbcb4c644d55b7a1f33bbb6809
 #EXTINF:-1 tvg-id="2398" tvg-logo="https://i.imgur.com/5sis895.png" group-title="🎬 Phim",Star Cinema
 https://dash.antik.sk/live/test_star_cinema_atktv/playlist.m3u8
 #EXTINF:-1 tvg-id="276" tvg-logo="https://i.imgur.com/fhQFLEl.png" group-title="🎭 Giải trí",2x2
@@ -1288,7 +1277,7 @@ https://livesport.io.vn/ok/vip1.php?id=cbssn
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=941405&extension=ts&play_token=ODWyLygMWo
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/1a/Canal%2B_Sport_2015.png" group-title="⚽ Thể thao",Canal+ Sport
 http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=958758&extension=ts&play_token=MskDtCSrpn
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Animated-Flag-Eu.gif" group-title="⚽ Thể thao",CẬP NHẬT : 03/09/2026 19:35:41
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Animated-Flag-Eu.gif" group-title="⚽ Thể thao",CẬP NHẬT : 03/09/2026 20:35:38
 https://livesport.io.vn/spo.m3u8
 #EXTINF:-1 tvg-id="dazn.1.pt" tvg-logo="https://img2.sport-tv-guide.live/images/tv-station-eleven-sports-1-pt-1500.png" group-title="⚽ Thể thao",DAZN 1
 https://livesport.io.vn/ok/apo.php?id=ele11
@@ -1348,7 +1337,7 @@ https://dash.antik.sk/live/test_fightbox_medium_atk/playlist.m3u8
 https://dash.antik.sk/live/test_golf_channel/playlist.m3u8
 #EXTINF:-1 tvg-id="1590" tvg-logo="https://i.imgur.com/pwxT0ON.png" group-title="⚽ Thể thao",KHL Prime
 http://fs.uplink.kz/khl_prime/tracks-v1a1/mono.ts.m3u8?token=onlinetv
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Animated-Flag-Eu.gif" group-title="⚽ Thể thao",LƯỢT TRUY CẬP : 757
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Animated-Flag-Eu.gif" group-title="⚽ Thể thao",LƯỢT TRUY CẬP : 793
 https://livesport.io.vn/spo.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QhdxNsB.png" group-title="⚽ Thể thao",MMA-TV.com
 http://fs.uplink.kz/mma/mono.m3u8?token=onlinetv
@@ -1595,11 +1584,10 @@ http://live-3.otcnet.ru/sportivny/tracks-v1a1/mono.m3u8
 http://5.188.159.128:8070/udar/index.m3u8
 #EXTINF:-1 tvg-id="686" tvg-logo="https://i.imgur.com/pEuaZVx.png" group-title="⚽ Thể thao",Футбол
 http://radio.tvs.by/Setanta1/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/06/18/13/1781765362332/737c1501b0c5_640_360.png" group-title="👶 Thiếu nhi",360 Thiếu Nhi
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=360-thieu-nhi
 #EXTINF:-1 tvg-id="2011" tvg-logo="https://i.imgur.com/i2AP0hp.png" group-title="👶 Thiếu nhi",Ani
 http://185.46.16.239:8000/Ani
+#EXTINF:-1 tvg-logo="https://i.imgur.com/2o5T0gi.png" group-title="👶 Thiếu nhi",Balapan
+http://live-3.otcnet.ru/Balapan/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/happy-heroes/images/c/c8/CCTV-14_Logo.png/revision/latest?cb=20201002050804" group-title="👶 Thiếu nhi",CCTV14
 http://74.91.26.218:82/live/cctv14hd.m3u8
 #EXTINF:-1 tvg-id="cartoonhd" tvg-logo="https://freight.cargo.site/w/1200/i/3cf72163d993c4d87263e6d4990ec4ccdd1e14b09ce89e6e35dee1de83ef4985/CN.jpg" group-title="👶 Thiếu nhi",Cartoon Network
@@ -1735,6 +1723,8 @@ http://103.90.220.236/qtvlive/qnr1.m3u8
 http://103.90.220.236/qtvlive/qnr2.m3u8
 #EXTINF:-1 tvg-id="fm" tvg-logo="https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICQ2ciKiAoMCxIOU3RhdGlvblByb2ZpbGUYgIDQidjS_wkMogEEemVubw/image/" group-title="📻 Radio",Radio DJ
 https://stream.zeno.fm/ehbutdfccm0uv
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/7LLC6d2m/RFI.png" group-title="📻 Radio",Radio France Internationale
+http://rfimonde96k.ice.infomaniak.ch/rfimonde-96k.mp3
 #EXTINF:-1 tvg-id="fm" tvg-logo="https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICQ2ciKiAoMCxIOU3RhdGlvblByb2ZpbGUYgICw0ILTsQoMogEEemVubw/image/" group-title="📻 Radio",Radio Nhạc Dân Ca
 https://stream.zeno.fm/a2dbs2tq1p8uv
 #EXTINF:-1 tvg-id="fm" tvg-logo="https://dongnhacvang.com/wp-content/uploads/2019/08/cropped-logo-nhac-vang-1-2.png" group-title="📻 Radio",Radio Nhạc Vàng Xưa
@@ -2130,18 +2120,6 @@ https://s6.kkphimplayer6.com/20250811/miyJKDrj/3500kb/hls/index.m3u8
 https://dash.antik.sk/live/test_one_plus_one_int_tizen/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/cvknPRt9/7.png" group-title="📦 Khác",7 канал (Красноярск)
 http://7channel.iptv2022.com/tracks-v5a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/13/13/1776063223569/462daff06d9d_640_360.png" group-title="📦 Khác",360 Anime
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=360-anime
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/15/22/177626841934/e289a43bd190_640_360.png" group-title="📦 Khác",360 C1 Châu Âu
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=360-c1-chau-au
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/13/13/1776063183880/03439dc9da19_640_360.png" group-title="📦 Khác",360 Hài - Tình Cảm
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=360-hai-tinh-cam
-#EXTINF:-1 tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/08/10/1775617851169/1f38a5af77c1_640_360.png" group-title="📦 Khác",360 Hành Động Châu Á
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://vmttv.dpdns.org/tv360/?id=360-hanh-dong-chau-a
 #EXTINF:-1 tvg-id="556" tvg-logo="https://i.imgur.com/NfnAiTR.png" group-title="📦 Khác",365 дней ТВ
 http://stream8.cinerama.uz/1242/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="abcaustralia" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/abcaustralia.png" group-title="📦 Khác",ABC Australia
@@ -2419,7 +2397,7 @@ https://liveh34.vtvprime.vn/hls/HGTV/03.m3u8
 http://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="tv360hoathinh" tvg-logo="https://img-ali1.tv360.vn/image1/2025/12/31/19/1767185202351/540d7e229911_640_360.png" group-title="📦 Khác",Hoạt hình
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-https://tv.vietanhtv.top/tv360/tv360.php?id=9934&expires=1788525328&token=d24ae115c4bb1f3824faf5f26f8aaebe
+https://tv.vietanhtv.top/tv360/tv360.php?id=9934&expires=1788528927&token=fb9900175febe20ed23a83143456e444
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Jtv_logo.svg/250px-Jtv_logo.svg.png?_=20220328012951" group-title="📦 Khác",JTV SBS
 http://61.85.197.53:1935/jtv_live/myStream/chunklist_w1542137203.m3u8
 #EXTINF:-1 group-title="📦 Khác",KCBS1
@@ -2453,8 +2431,6 @@ https://5c3639aa99149.streamlock.net/live_TV/tv/playlist.m3u8
 https://mcothd-streaming-edge-cdn.mcot.net/tencentmcot/smil:tencentmcot.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QhdxNsB.png" group-title="📦 Khác",MMA-TV.com
 http://fs.uplink.kz/mma/mono.m3u8?token=onlinetv
-#EXTINF:-1 tvg-id="mrtv.mm@sd" tvg-logo="https://i.imgur.com/uyv7oJH.png" group-title="📦 Khác",MRTV
-https://mrtvott.com/cache/MRTV-HD/master.m3u8
 #EXTINF:-1 tvg-id="mta6asia.uk@sd" tvg-logo="https://i.imgur.com/nhCNPJI.png" group-title="📦 Khác",MTA6 Asia
 https://livemtaasia.akamaized.net/hls/live/2039224/mta6asia/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/MitLeCJ.png" group-title="📦 Khác",Madani Channel Urdu
@@ -2550,7 +2526,7 @@ https://s129135.cdn.mytvnet.vn/pkg20/live_dzones/tlc.smil/manifest.mpd
 https://v7.kkphimplayer7.com/20260729/UgOYpPkC/3500kb/hls/index.m3u8
 #EXTINF:-1 tvg-id="5600" tvg-logo="https://i.imgur.com/r3u0mxr.png" group-title="📦 Khác",UNIVER TV
 http://cdn.universmotri.ru/live/mq.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="update" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5oGX8rfISQE2e82j_6uBF0mvjnvwYDhWOCApBQWQ3tQ&s=10" group-title="📦 Khác",UPDATE 19:35⏱03/09
+#EXTINF:-1 tvg-id="update" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5oGX8rfISQE2e82j_6uBF0mvjnvwYDhWOCApBQWQ3tQ&s=10" group-title="📦 Khác",UPDATE 20:35⏱03/09
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://tv.vietanhtv.top/1.mp4
 #EXTINF:-1 tvg-id="vov1" tvg-logo="https://admin.vov.gov.vn/UploadFolder/KhoTin/Images/UploadFolder/VOVVN/Images/sites/default/files/2024-02/vov1.jpg" group-title="📦 Khác",VOV1
@@ -2745,8 +2721,6 @@ http://vod.tuva.ru/nst/index.m3u8
 http://stream8.cinerama.uz/1248/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="1779" tvg-logo="https://i.imgur.com/uXOz2d9.png" group-title="📦 Khác",Наша Сибирь
 http://stream8.cinerama.uz/1424/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="2450" tvg-logo="https://i.imgur.com/67ZVDKW.png" group-title="📦 Khác",Наша Тема
-http://live-3.otcnet.ru/nashatema/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="447" tvg-logo="https://i.imgur.com/IOxIsPj.png" group-title="📦 Khác",Наше Новое Кино
 http://stream8.cinerama.uz/1051/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="300166" tvg-logo="https://i.imgur.com/W7ste2f.png" group-title="📦 Khác",Неизвестная Россия
