@@ -1,4 +1,6 @@
 vless://C1CE3941-AC6F-4E98-9791-3B33ABBAF64F@sg1-r.link-t7.com:10036/?type=grpc&encryption=none&flow=&serviceName=update&sni=s0.awsstatic.com&fp=chrome&security=reality&pbk=wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE&sid=686c0ef0&packetEncoding=xudp#SG | 01
-trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?allowInsecure=1&type=tcp#SG | 02
-vless://49c86212-ae0b-430e-9abb-244e715b533f@168.144.99.114:443?security=tls&sni=paid.sshehi.ggff.net&type=ws#SG | 03
+vless://F2987FBA-B653-444D-8057-6B6474E448C6@sg4-r.link-t7.com:10039/?type=grpc&encryption=none&flow=&serviceName=update&sni=d1.awsstatic.com&fp=chrome&security=reality&pbk=wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE&sid=686c0ef0#SG | 02
+trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?allowInsecure=1&sni=ww12.levikogjgfdd.ir&type=tcp#SG | 03
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#SG | 04
+vless://49c86212-ae0b-430e-9abb-244e715b533f@168.144.99.114:443?fp=firefox&path=%2F&security=tls&sni=paid.sshehi.ggff.net&type=ws#SG | 05
+vmess://eyJhZGQiOiI0Ny4yMzYuMjA3LjI0NSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNmExNWZhZjYtM2Q2MS00YzkzLTk3NGUtOGNhMDFmMmFhNDUxIiwibmV0Ijoibm9uZSIsInBhdGgiOiIiLCJwb3J0IjoiMjMyNjciLCJwcyI6IlNHIHwgMDYiLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0#SG | 06
