@@ -1,3 +1,2 @@
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:17623?flow=xtls-rprx-vision&fp=safari&host=www.apple.com&path=%2F&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#SG | 01
 vless://49c86212-ae0b-430e-9abb-244e715b533f@168.144.99.114:443?fp=firefox&security=tls&sni=paid.sshehi.ggff.net&type=ws#SG | 02
-ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6cVVjZ3NDcFArUHc0WG9DdnBMSWpFM1BUd2N4SVRVUmVFOGVLanYrMXVMcz0@168.107.70.79:56927#SG | 03
