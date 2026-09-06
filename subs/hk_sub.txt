@@ -1,8 +1,5 @@
 vless://DFDBA849-E8F0-4C1B-9BD6-C4C87679B0A3@hk6-r.link-t7.com:10136/?type=grpc&encryption=none&flow=&serviceName=movie&sni=s0.awsstatic.com&allowInsecure=1&fp=chrome&security=reality&pbk=wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE&sid=686c0ef0&packetEncoding=xudp#HK | 01
-trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 02
-vless://c20828bd-c63b-401f-b324-7b652dd353af@hk3.miyazono-kaori.com:443?flow=xtls-rprx-vision&fp=chrome&pbk=zV4Sja0iajpdzkR1iBMbI7RRWL2nlpgwGOtirQSG-zc&security=reality&sid=b81edf7fdee4&sni=hk4e-launcher-static.hoyoverse.com&spx=%2F&type=tcp#HK | 03
+vmess://eyJ2IjoiMiIsInBzIjoiSEsgfCAwMiIsImFkZCI6IjE0My4xNC4xODkuMTI1IiwicG9ydCI6IjIxMzE2IiwidHlwZSI6Im5vbmUiLCJpZCI6IjExNmY2ZWNkLTI3NWUtNGI1MC05MjFkLTc4MGU3OGE1MjZjYiIsImFpZCI6IjAiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwiaG9zdCI6InB1bGwuZnJlZS52aWRlby4xMDAxMC5jb20iLCJ0bHMiOiIiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ#HK | 02
+trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 03
 vless://5e8e81ac-a1c4-4543-b81e-651bf9872b54@162.128.157.164:443?flow=xtls-rprx-vision&fp=chrome&pbk=TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0&security=reality&sid=14156e3ac23212cc&sni=www.bing.com&type=tcp#HK | 04
-vless://c20828bd-c63b-401f-b324-7b652dd353af@hk4.miyazono-kaori.com:443?flow=xtls-rprx-vision&fp=chrome&pbk=KhRbgahSFqlPKB6QNp9QYb4oXMy2SIgi440tm6iFZHA&security=reality&sid=ea6b43&sni=hk4e-launcher-static.hoyoverse.com&spx=%2F&type=tcp#HK | 05
-vless://c20828bd-c63b-401f-b324-7b652dd353af@hk6.miyazono-kaori.com:443?flow=xtls-rprx-vision&fp=chrome&pbk=2kl8isq7ajNv3BR6Z1EPag_LqJHmsfo2pn0dA7yetko&security=reality&sid=a2d13d677624197e&sni=www.hsbc.com.hk&spx=%2F&type=tcp#HK | 06
-vless://c20828bd-c63b-401f-b324-7b652dd353af@hk5.miyazono-kaori.com:443?flow=xtls-rprx-vision&fp=chrome&pbk=HbjpGbCmp7lBysnS-twEYgGoriXACHZQObIpU9zJWVc&security=reality&sid=a273e9ee6ac0a466&sni=www.hsbc.com.hk&spx=%2F&type=tcp#HK | 07
-vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?encryption=none&security=reality&sni=tesla.com&fp=chrome&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&sid=af1bdd293097b664&type=tcp&headerType=none#HK | 08
+vless://603f2593-b20b-4103-8967-9c67eecfe6bd@27.0.232.125:443?flow=xtls-rprx-vision&fp=chrome&pbk=kdRZN4WiVlF32uFV6tMU8aMLFRHWw70oEqE3iKlnrl4&security=reality&sid=5b88be779393c536&sni=gateway.icloud.com&type=raw#HK | 05
