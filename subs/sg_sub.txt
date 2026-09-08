@@ -1,2 +1,2 @@
-vless://65ab0a28-a77f-4853-ac4b-c426310276d5@95.111.197.114:80?path=%2FFREE+by+Tharuwa+%280767597317%29&security=none&type=ws#SG | 01
+vless://65ab0a28-a77f-4853-ac4b-c426310276d5@95.111.197.114:80?Telegram=Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server---Cfox_Server&path=/FREE+by+Tharuwa+(0767597317)&security=none&encryption=none&host=zoom.us&type=ws#SG | 01
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#SG | 02
