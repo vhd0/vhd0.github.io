@@ -1,2 +1,4 @@
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#SG | 01
-trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?security=tls&insecure=1&host=Telegram-Leviko_v2ray&headerType=none&type=tcp&allowInsecure=1&sni=ww12.levikogjgfdd.ir#SG | 02
+vless://5f82e7d7-38dc-4381-9ded-a025342fb330@95.111.197.114:80?path=/FREE by Tharuwa (0767597317)&security=none&encryption=none&host=m.zoom.us&type=ws#SG | 01
+vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:17623?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#SG | 02
+trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@ww12.levikogjgfdd.ir:50573?allowInsecure=1&fp=chrome&sni=telegram-leviko_v2ray#SG | 03
+vless://c2a08e4d-da8f-435e-90e8-65600ee185be@uh-sg01.ziyoufly.xyz:55555?flow=xtls-rprx-vision&fp=random&pbk=1XQ60qYOfBZJpcilNV9Fu7OSpuO5_6-zrNZIYhB_YU4&security=reality&sid=af317506&sni=d1.awsstatic.com&type=tcp#SG | 04
