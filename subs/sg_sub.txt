@@ -1,5 +1,6 @@
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6ZHNsSTU4cW40cFNTMFlENHBlU1lnVVRiWXRKeXB6SXIrV3Z0NHVMWExOST0@146.235.20.146:56927#SG | 01
-ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206Y09pQyszSmhBWE13ZEdWNWV4bnJNU29ySlUwUmw1cWxMQ2JDQXVEbFdZND06R3duQWRjRHpMYy9WSnhmU3JzejJpY3dMUXZ5SEpuMWZSWkEvNFpZMkhUdz0@51.79.159.206:2083#SG | 02
-ss://YWVzLTI1Ni1nY206VVdVSlM4RjdKTjhPckUzWnk4eW9ZeGgyVDNhVU5xTDBveG1Hb0hDVCsrZz0@68.183.180.151:16696#SG | 03
-trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?allowInsecure=1&sni=telegram-leviko_v2ray&type=tcp#SG | 04
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:17623?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#SG | 05
+vless://5f82e7d7-38dc-4381-9ded-a025342fb330@95.111.197.114:80?host=m.zoom.us&path=%2FFREE+by+Tharuwa+%280767597317%29&security=none&type=ws#SG | 02
+trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?allowInsecure=1&sni=telegram-leviko_v2ray&type=tcp#SG | 03
+vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#SG | 04
+vless://e3f0c894-0f76-4683-a751-6a93da8fd14d@206.206.78.36:443?flow=xtls-rprx-vision&fp=firefox&pbk=UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ&security=reality&sid=133a3f10a1581047&sni=www.cloudflare.com&type=tcp#SG | 05
+ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206Y09pQyszSmhBWE13ZEdWNWV4bnJNU29ySlUwUmw1cWxMQ2JDQXVEbFdZND06R3duQWRjRHpMYy9WSnhmU3JzejJpY3dMUXZ5SEpuMWZSWkEvNFpZMkhUdz0@51.79.159.206:2083#SG | 06
