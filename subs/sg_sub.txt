@@ -1,6 +1,4 @@
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpURkVsRzJGVnF5cUc@176.97.64.144:8388#SG | 01
-vless://e3f0c894-0f76-4683-a751-6a93da8fd14d@206.206.78.36:443?flow=xtls-rprx-vision&fp=random&pbk=UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ&security=reality&sid=133a3f10a1581047&sni=www.cloudflare.com&type=tcp#SG | 02
-trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?allowInsecure=1&sni=telegram-leviko_v2ray&type=tcp#SG | 03
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:17623?flow=xtls-rprx-vision&fp=qq&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#SG | 04
-ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206Y09pQyszSmhBWE13ZEdWNWV4bnJNU29ySlUwUmw1cWxMQ2JDQXVEbFdZND06R3duQWRjRHpMYy9WSnhmU3JzejJpY3dMUXZ5SEpuMWZSWkEvNFpZMkhUdz0@51.79.159.206:2083#SG | 05
-vless://54a9c202-cfe9-4bb8-826c-653a52a96c6d@142.91.102.35:443?encryption=none&fp=chrome&security=tls&sni=8.sahanwickramasinghe.me&type=tcp#SG | 06
+trojan://pvZE3UfT0ziK1omVLlsjINBqeqqwab1M@139.59.238.97:50573?allowInsecure=1&sni=telegram-leviko_v2ray&type=tcp#SG | 02
+vless://e3f0c894-0f76-4683-a751-6a93da8fd14d@206.206.78.36:443?flow=xtls-rprx-vision&fp=firefox&pbk=UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ&security=reality&sid=133a3f10a1581047&sni=www.cloudflare.com&type=raw#SG | 03
+vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:17623?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#SG | 04
