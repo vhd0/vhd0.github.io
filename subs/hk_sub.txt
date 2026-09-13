@@ -1,5 +1,5 @@
-vless://5e8e81ac-a1c4-4543-b81e-651bf9872b54@162.128.157.164:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.bing.com&fp=chrome&pbk=TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0&sid=14156e3ac23212cc&type=tcp&headerType=none#HK | 01
-trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 02
+trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 01
+vless://5e8e81ac-a1c4-4543-b81e-651bf9872b54@162.128.157.164:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.bing.com&fp=chrome&pbk=TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0&sid=14156e3ac23212cc&type=tcp&headerType=none#HK | 02
 vless://6dbb8854-17a5-4684-b930-c11f022975ec@dlbgwqqngrjbwan.jiedddym.com:42868?flow=xtls-rprx-vision&fp=chrome&host=www.apple.com&path=%2F&pbk=GLtdhq3ZSKYlJv62ye5dFKfjI3UF9mBIGOl5ms75rVA&security=reality&sid=747a75eb5ecef8&sni=www.apple.com&type=tcp#HK | 03
 vless://363d3f39-bed2-3b6a-b692-c7c3236c2b1c@hkt.ddnnss.me:443?flow=xtls-rprx-vision&fp=firefox&host=www.xdstudio.hk&path=%2F&pbk=coAFlCEKJKpNWWSMAbgwnXtWa703hZZkjoQznSF_Pz0&security=reality&sni=www.xdstudio.hk&type=tcp#HK | 04
 vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?encryption=none&security=reality&sni=tesla.com&fp=chrome&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&sid=af1bdd293097b664&type=tcp&headerType=none#HK | 05
