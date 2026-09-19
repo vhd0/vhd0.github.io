@@ -1,5 +1,5 @@
-vless://5e8e81ac-a1c4-4543-b81e-651bf9872b54@162.128.157.164:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.bing.com&fp=chrome&pbk=TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0&sid=14156e3ac23212cc&type=tcp&headerType=none#HK | 01
-vless://07cb07b9-0c4d-46c1-a15a-b147511b6b07@195.58.144.56:11907?encryption=none&security=tls&fp=chrome&alpn=h2,http/1.1&type=tcp&headerType=none#HK | 02
-trojan://tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz@47.240.80.220:2052?allowInsecure=1&sni=vpn.12169.top&type=tcp#HK | 03
-trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 04
+vless://2dd387bd-6d19-473a-8d5e-ecbca573b0f9@hk3.mfm-oss.top:60013?flow=xtls-rprx-vision&fp=safari&pbk=nzwLXAhU6QUZGQfzHACFSxc0T1YHfBxZs9Rlc2jXews&security=reality&sid=7a91fe90e1d176fc&sni=www.xiaohongshu.com&type=tcp#HK | 01
+vless://5e8e81ac-a1c4-4543-b81e-651bf9872b54@vj37-1936vtw.fincore.top:443?security=reality&encryption=none&pbk=TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.bing.com&sid=14156e3ac23212cc#HK | 02
+trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 03
+vless://07cb07b9-0c4d-46c1-a15a-b147511b6b07@195.58.144.56:11907?encryption=none&security=tls&fp=chrome&alpn=h2,http/1.1&type=tcp&headerType=none#HK | 04
 vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?encryption=none&security=reality&sni=tesla.com&fp=chrome&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&sid=af1bdd293097b664&type=tcp&headerType=none#HK | 05
