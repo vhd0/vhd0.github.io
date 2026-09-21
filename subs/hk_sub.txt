@@ -1,4 +1,7 @@
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3d2oxOWVucHA2OHB4OHQ3@sth.free-outline.giize.com:1081#HK | 01
-trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 02
-vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.239.6.251:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=tesla.com&sid=af1bdd293097b664#HK | 03
-vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&sni=tesla.com&sid=af1bdd293097b664#HK | 04
+vmess://eyJhZGQiOiI4OS4yMjMuOTUuNzciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjA0NjIxYmFlLWFiMzYtMTFlYy1iOTA5LTAyNDJhYzEyMDAwMiIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMjIzMjQiLCJwcyI6IkhLIHwgMDIiLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0#HK | 02
+trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#HK | 03
+vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.239.6.251:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=tesla.com&sid=af1bdd293097b664#HK | 04
+vless://bf41cc32-f0a2-4b27-ba9f-8026ce0aed84@47.238.126.123:443?flow=xtls-rprx-vision&fp=chrome&pbk=4IeLDkxPTFecGeobLaxV9XaVW7oBgcqwW2dvfFtPQD4&security=reality&sid=7771265f0b109528&sni=www.amazon.com&type=tcp#HK | 05
+vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&sni=tesla.com&sid=af1bdd293097b664#HK | 06
+trojan://tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz@47.240.80.220:2052?allowInsecure=1&sni=vpn.12169.top&type=tcp#HK | 07
