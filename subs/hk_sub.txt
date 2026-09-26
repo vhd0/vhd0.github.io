@@ -1,4 +1,2 @@
 trojan://tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz@47.240.80.220:2052?allowInsecure=1&sni=vpn.12169.top&type=tcp#HK | 01
-trojan://BxceQaOe@119.246.1.143:443?allowInsecure=1&sni=t.me&type=tcp#HK | 02
-vless://64b377ab-779a-46e2-8525-69810668ca7a@hk3.miyazono-kaori.com:443?flow=xtls-rprx-vision&fp=chrome&host=hk4e-launcher-static.hoyoverse.com&path=%2F&pbk=zV4Sja0iajpdzkR1iBMbI7RRWL2nlpgwGOtirQSG-zc&security=reality&sid=b81edf7fdee4&sni=hk4e-launcher-static.hoyoverse.com&type=tcp#HK | 03
-vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&sni=tesla.com&sid=af1bdd293097b664#HK | 04
+trojan://BxceQaOe@119.246.1.143:443?allowInsecure=1&sni=t.me%25252fripaojiedian&type=tcp#HK | 02
