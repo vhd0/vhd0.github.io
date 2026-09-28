@@ -1,5 +1,6 @@
-trojan://BxceQaOe@119.246.1.143:443?allowInsecure=1&sni=t.me%25252fripaojiedian&type=tcp#HK | 01
-vless://e3a14b3d-8995-4031-a207-32ba5707c1ba@hk-1.gsafevpnapi.com:20270?flow=xtls-rprx-vision&fp=chrome&pbk=0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8&security=reality&sid=d5b538acf8a93540&sni=www.yahoo.com&type=tcp#HK | 02
-vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.239.6.251:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=tesla.com&sid=af1bdd293097b664#HK | 03
-trojan://tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz@47.240.80.220:2052?allowInsecure=1&type=tcp#HK | 04
-vless://07cb07b9-0c4d-46c1-a15a-b147511b6b07@195.58.144.56:11907?security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0#HK | 05
+ss://YWVzLTEyOC1nY206OWJlNWFjNzEtYjc5MC00MzY0LWEyNjgtZDdiZWQ5OTRmMjEz@191.223.214.11:8444#HK | 01
+trojan://BxceQaOe@119.246.1.143:443?allowInsecure=1&sni=t.me%25252fripaojiedian&type=tcp#HK | 02
+vless://e3a14b3d-8995-4031-a207-32ba5707c1ba@hk-1.gsafevpnapi.com:20270?flow=xtls-rprx-vision&fp=chrome&pbk=0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8&security=reality&sid=d5b538acf8a93540&sni=www.yahoo.com&type=tcp#HK | 03
+vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.239.6.251:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=tesla.com&sid=af1bdd293097b664#HK | 04
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiYjE1ZTQ4MWQtMTdlNC00MWE4LTg0YzItMjNkNGYwNTE0ZDlhIiwiaW5zZWN1cmUiOiIwIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsgfCAwNSIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiLS0tIiwidiI6IjIiLCJ2Y24iOiIiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ#HK | 05
+vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&sni=tesla.com&sid=af1bdd293097b664#HK | 06
