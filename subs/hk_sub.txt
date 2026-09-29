@@ -1,3 +1,4 @@
-vless://e3a14b3d-8995-4031-a207-32ba5707c1ba@hk-1.gsafevpnapi.com:20270?flow=xtls-rprx-vision&fp=chrome&pbk=0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8&security=reality&sid=d5b538acf8a93540&sni=www.yahoo.com&type=tcp#HK | 01
-vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&sni=tesla.com&sid=af1bdd293097b664#HK | 02
+trojan://tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz@47.240.80.220:2052?allowInsecure=1&sni=vpn.12169.top&type=tcp#HK | 01
+vless://e3a14b3d-8995-4031-a207-32ba5707c1ba@hk-1.gsafevpnapi.com:20270?flow=xtls-rprx-vision&fp=chrome&pbk=0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8&security=reality&sid=d5b538acf8a93540&sni=www.yahoo.com&type=tcp#HK | 02
 vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.239.6.251:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=tesla.com&sid=af1bdd293097b664#HK | 03
+vless://928e6cce-8ced-4243-9a48-a6642edd09b0@47.238.210.5:13779?security=reality&encryption=none&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&headerType=none&fp=chrome&type=tcp&sni=tesla.com&sid=af1bdd293097b664#HK | 04
