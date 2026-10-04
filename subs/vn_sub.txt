@@ -1,1 +1,1 @@
-vless://e0aafde7-37e2-486b-eb30-efa71166bf7e@165.154.55.105:20984?security=reality&encryption=none&pbk=Ns3J1Dc0WBSu560uhGwDfn1kic7IZm3ZHggSpExhyRo&headerType=none&fp=chrome&type=tcp&sni=dl.google.com#VN | 01
+vless://b83faafc-cbb7-4655-99d4-2c4c39a49d1b@150.95.109.109:2086?security=none&type=tcp#VN | 01
