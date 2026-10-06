@@ -1,7 +1,6 @@
-vless://0590ab38-cb22-41d3-8312-6f396a5cec58@129.150.51.127:49289?sni=www.microsoft.com&fp=chrome&security=tls#SG | 01
-vless://e2632874-614e-4261-af62-52aca3358e4e@173.234.14.105:59615?flow=xtls-rprx-vision&fp=qq&pbk=7PB-58vYXFLNhK6kY8bJJO3-fPOXTPQJ0UqDlhSOH3M&security=reality&sid=6b&sni=biosmod.partners.nvidia.com&type=tcp#SG | 02
-vless://2d1ad594-80a4-4bfb-87a6-038e39701f51@sg2-8sb.6121999.dpdns.org:19825?security=reality&type=tcp&sni=sg2-8sb.6121999.dpdns.org&fp=chrome&flow=xtls-rprx-vision&sid=6ba85179e30d4fc2&pbk=GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI#SG | 03
+vless://c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3@47.237.74.17:16263?security=none&encryption=none&headerType=none&type=tcp#SG | 01
+vless://0590ab38-cb22-41d3-8312-6f396a5cec58@129.150.51.127:49289?sni=www.microsoft.com&fp=chrome&security=tls#SG | 02
+vless://e2632874-614e-4261-af62-52aca3358e4e@173.234.14.105:59615?flow=xtls-rprx-vision&fp=ios&pbk=7PB-58vYXFLNhK6kY8bJJO3-fPOXTPQJ0UqDlhSOH3M&security=reality&sid=6b&sni=biosmod.partners.nvidia.com&type=tcp#SG | 03
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#SG | 04
 vless://cb15cce9-73ed-4928-b38c-462f0732cbe9@217.217.254.126:2053?encryption=none&type=tcp&security=reality&pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw&sid=87829de0e2bb82cb&sni=www.cloudflare.com&fp=firefox&allowInsecure=1#SG | 05
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5ZXBwM285bmc4ZWo1OXV2@45.128.12.20:14249#SG | 06
-vless://7e68e32f-8015-4f37-9082-70e8b0b58043@13.212.248.1:443?flow=xtls-rprx-vision&fp=chrome&host=cs.a8game.vip&path=%2F&pbk=PhOIlEfiYVUhkWKIfX_IOwJ6zz_Zk0QEj4sfcZyuShY&security=reality&sid=abcddb0c38896b8b&sni=cs.a8game.vip&type=tcp#SG | 07
+vless://2d1ad594-80a4-4bfb-87a6-038e39701f51@sg2-8sb.6121999.dpdns.org:19825?security=reality&type=tcp&sni=sg2-8sb.6121999.dpdns.org&fp=chrome&flow=xtls-rprx-vision&sid=6ba85179e30d4fc2&pbk=GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI#SG | 06
