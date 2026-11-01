@@ -1,5 +1,6 @@
 vless://91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a@165.154.63.139:443?flow=xtls-rprx-vision&fp=random&pbk=AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ&security=reality&sid=ca4aedd4&sni=www.amazon.com&type=tcp#HK | 01
 vless://c1c04450-bf71-4049-ad0c-9cf6d94d9f1f@103.148.73.173:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#HK | 02
 vless://07cb07b9-0c4d-46c1-a15a-b147511b6b07@195.58.144.56:11907?allowInsecure=0&alpn=h2%2Chttp/1.1&fp=chrome&security=tls#HK | 03
-trojan://778f5385b4254495@hik160.pacemakere.com:20014?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=hik160.pacemakere.com#HK | 04
-vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@152.175.6.229:31884?security=tls&amp;encryption=none&amp;insecure=0&amp;headerType=none&amp;fp=firefox&amp;type=tcp&amp;allowInsecure=0&amp;sni=hk010.zestapp778.com#HK | 05
+vmess://eyJ2IjoiMiIsInBzIjoiSEsgfCAwNCIsImFkZCI6ImV1dTF5QWxmbWNxdkxKRXgudi4zZG5zLnZpcCIsInBvcnQiOiI0NDMiLCJ0eXBlIjoibm9uZSIsImlkIjoiZDIzN2FiMzgtMTk3NC00YjM2LTk0YTMtMDY2NWNlODU4N2I5IiwiYWlkIjoiMCIsIm5ldCI6IndzIiwicGF0aCI6Ii93cy12bWVzcyIsImhvc3QiOiJldXUxeUFsZm1jcXZMSkV4LnYuM2Rucy52aXAiLCJ0bHMiOiJ0bHMiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ#HK | 04
+trojan://778f5385b4254495@hik160.pacemakere.com:20014?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=hik160.pacemakere.com#HK | 05
+vmess://eyJhZGQiOiJpMnBzbTNrbm9mNXFqaml4LnYuM2Rucy52aXAiLCJhaWQiOjAsImhvc3QiOiJpMnBzbTNrbm9mNXFqaml4LnYuM2Rucy52aXAiLCJpZCI6ImYyM2JiNDI3LWMxZjktNDM3My04NzZjLTJmNDNlOWY3OTBmMyIsIm5ldCI6IndzIiwicGF0aCI6Ii93cy12bWVzcyIsInBvcnQiOjQ0MywicHMiOiJISyB8IDA2IiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ#HK | 06
