@@ -1,4 +1,5 @@
 trojan://778f5385b4254495@hik160.pacemakere.com:20014?allowInsecure=1&sni=hik160.pacemakere.com#HK | 01
-vless://07cb07b9-0c4d-46c1-a15a-b147511b6b07@195.58.144.56:11907?allowInsecure=0&alpn=h2%2Chttp/1.1&fp=chrome&security=tls#HK | 02
-vless://c1c04450-bf71-4049-ad0c-9cf6d94d9f1f@103.148.73.173:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#HK | 03
-vless://91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a@165.154.63.139:443?flow=xtls-rprx-vision&fp=random&pbk=AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ&security=reality&sid=ca4aedd4&sni=www.amazon.com&type=tcp#HK | 04
+vless://91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a@165.154.63.139:443?flow=xtls-rprx-vision&fp=random&pbk=AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ&security=reality&sid=ca4aedd4&sni=www.amazon.com&type=tcp#HK | 02
+vless://07cb07b9-0c4d-46c1-a15a-b147511b6b07@195.58.144.56:11907?security=tls&type=tcp&packetEncoding=xudp&alpn=h2%2Chttp%2F1.1&sni=195.58.144.56&fp=chrome#HK | 03
+vless://c1c04450-bf71-4049-ad0c-9cf6d94d9f1f@103.148.73.173:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#HK | 04
+vmess://eyJ2IjpudWxsLCJwcyI6IkhLIHwgMDUiLCJhZGQiOiJyaGhpZXJrd3JmNmZoczJoLnYuM2Rucy52aXAiLCJwb3J0Ijo0NDMsImlkIjoiNzhiM2YxNDktZjAzNy00NjVkLWIyZmItMTFhZGI2ZjczZmY4IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOm51bGwsImhvc3QiOiIiLCJhbHBuIjpudWxsLCJwYXRoIjoiL3dzLXZtZXNzIiwidGxzIjoidGxzIiwic25pIjoicmhoaWVya3dyZjZmaHMyaC52LjNkbnMudmlwIiwiZnAiOm51bGwsIm5hbWUiOiJISyDwn4et8J+HsCB8IEBSYXlkaWthbHggfCBBN0UxQTgiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ#HK | 05
