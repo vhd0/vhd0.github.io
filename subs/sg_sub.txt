@@ -1,8 +1,8 @@
 ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@128.1.186.73:8080#SG | 01
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?sni=searchcreativejobsandshowcaseyourartistictalents.com#SG | 02
-trojan://e26a229d-e8f2-4ff9-8c7d-58a9d83ee437@139.180.146.200:8886?#SG | 03
+trojan://e26a229d-e8f2-4ff9-8c7d-58a9d83ee437@139.180.146.200:8886?#SG | 02
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?sni=searchcreativejobsandshowcaseyourartistictalents.com#SG | 03
 vless://32cf52f4-b8d2-4ed5-a37c-0d0a8e743309@206.206.76.75:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.cloudflare.com&fp=firefox&flow=xtls-rprx-vision&sid=a775360a48ef5cfb&pbk=gSHylaTvEzWj19Bk-zLHXKYUINGWVmo_ybCiD2CRinE&encryption=none#SG | 04
 vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@139.162.27.96:2096?security=tls&type=ws&path=%2Ffree-server.techsonic.dev&host=free-server.techsonic.dev&packetEncoding=xudp&sni=free-server.techsonic.dev&fp=chrome#SG | 05
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:10574?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#SG | 06
 vless://09f30c46-3964-41ce-882a-72aee83ddd42@hw6.divarkhaghazi.com:465?&security=tls&fp=chrome&alpn=http%2F1.1&sni=hw6.divarkhaghazi.com.&type=ws&headerType=none&host=hw6.divarkhaghazi.com.&path=%2F#SG | 07
-vless://f46182d1-e13b-47d3-97e2-fa5426a93e7c@45.132.75.213:2053?security=reality&type=tcp&packetEncoding=xudp&sni=www.cloudflare.com&fp=firefox&sid=cd7e85995ae2afc9&pbk=TpWeZocgNOygOhMo0l7oJawPu7STkn9D-SOa0UppcyY#SG | 08
+vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@sg1.zestapp778.com:56984?sni=sg1.zestapp778.com&fp=chrome&security=tls#SG | 08
