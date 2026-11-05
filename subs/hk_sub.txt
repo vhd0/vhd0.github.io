@@ -1,1 +1,1 @@
-vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@152.175.6.229:31884?encryption=none&security=tls&sni=hk010.zestapp778.com&fp=chrome&type=tcp&headerType=none#HK | 01
+vless://db80088c-32a1-4cb8-a907-0f3cb7844152@hk1.japancase.site:443?encryption=none&flow=xtls-rprx-vision&pbk=pGCqNljaUIUVC7xpHa9nFnu6vsQ0OX3QyfvYMhLZuWY&security=reality&sid=bee10b047804c637&sni=hk1.japancase.site&type=tcp&fp=chrome#HK | 01
