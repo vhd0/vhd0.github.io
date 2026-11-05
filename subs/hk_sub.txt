@@ -1,1 +1,1 @@
-vmess://eyJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsImFpZCI6MCwiaG9zdCI6IjQ3LjI0NC4xMjAuMTk3IiwiaWQiOiJiOWRlMWJjOS1iYWE3LTQxYWMtODZmNy1jY2Q1OTY5NWNiMjEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraSIsInBvcnQiOjIzMDI2LCJwcyI6IkhLIHwgMDEiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9#HK | 01
+vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@152.175.6.229:31884?encryption=none&security=tls&sni=hk010.zestapp778.com&fp=chrome&type=tcp&headerType=none#HK | 01
