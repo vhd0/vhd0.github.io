@@ -1,2 +1,1 @@
 vless://db80088c-32a1-4cb8-a907-0f3cb7844152@85.155.149.190:443?encryption=none&flow=xtls-rprx-vision&pbk=pGCqNljaUIUVC7xpHa9nFnu6vsQ0OX3QyfvYMhLZuWY&security=reality&sid=bee10b047804c637&sni=hk1.japancase.site&type=tcp&fp=chrome#HK | 01
-vless://91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a@165.154.63.139:443?flow=xtls-rprx-vision&fp=random&pbk=AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ&security=reality&sid=ca4aedd4&sni=www.amazon.com&type=tcp#HK | 02
