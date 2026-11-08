@@ -1,10 +1,8 @@
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@128.1.186.73:8080#SG | 01
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@149.88.107.74:19999#SG | 02
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@149.88.106.74:19999#SG | 03
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@149.88.107.47:19999#SG | 01
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@149.88.106.74:19999#SG | 02
+vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@45.76.155.179:443?sni=sg003.zestapp778.com&fp=firefox&security=tls#SG | 03
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?allowInsecure=1&sni=searchcreativejobsandshowcaseyourartistictalents.com#SG | 04
 trojan://e26a229d-e8f2-4ff9-8c7d-58a9d83ee437@139.180.146.200:8886?#SG | 05
-vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@45.76.155.179:443?sni=sg003.zestapp778.com&fp=firefox&security=tls#SG | 06
-vless://59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72@134.185.81.5:47881?security=reality&type=tcp&packetEncoding=xudp&sni=www.tesla.com&fp=chrome&flow=xtls-rprx-vision&sid=38d72071&pbk=6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4&encryption=none#SG | 07
-vless://6ba2eac6-0ec9-44ca-a42b-a8e23aafb530@3.0.70.13:1114?encryption=none&flow=xtls-rprx-vision&pbk=WfkCF0eEuIoO0MyJsKOddU89QrTzCZ4y2dzCJbH99CQ&security=reality&sid=79a1e14b&sni=yahoo.com&type=tcp&fp=chrome#SG | 08
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:10574?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#SG | 09
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?#SG | 10
+vless://59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72@134.185.81.5:47881?security=reality&type=tcp&packetEncoding=xudp&sni=www.tesla.com&fp=chrome&flow=xtls-rprx-vision&sid=38d72071&pbk=6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4&encryption=none#SG | 06
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?#SG | 07
+vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:10574?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#SG | 08
