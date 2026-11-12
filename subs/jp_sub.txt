@@ -1,5 +1,5 @@
 ss://YWVzLTEyOC1nY206QndscWg3R2NGQg@168.138.205.100:53758#JP | 01
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:18007?flow=xtls-rprx-vision&fp=ios&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#JP | 02
-vless://ee2112e4-1e58-4f77-b162-5ef869358df9@168.110.45.41:23444?type=tcp&headerType=none&security=reality&encryption=none&sni=www.microsoft.com&fp=chrome&pbk=zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c&sid=119c9e68498f5900&flow=xtls-rprx-vision#JP | 03
-vless://eb8613e3-8393-4cff-a3ad-6501fd4adc63@152.69.195.67:47878?security=none&type=tcp&packetEncoding=xudp&sni=152.69.195.67&encryption=none#JP | 04
-vmess://eyJ2IjoiMiIsInBzIjoiSlAgfCAwNSIsImFkZCI6IjE2OC4xMzguNDMuNzUiLCJwb3J0Ijo4MCwiaWQiOiIxMWMzNjI3Zi0zMWU4LTQ2OTUtZGZiZC0zNDA3NmUyZjFmNWQiLCJhaWQiOjAsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiIiLCJwYXRoIjoiL2NjdHYxMy5tM3U4IiwiaG9zdCI6ImpwMDEuYTBhLnh5eiIsInNraXAtY2VydC12ZXJpZnkiOnRydWV9#JP | 05
+vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:19645?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#JP | 02
+vmess://eyJ2IjoiMiIsInBzIjoiSlAgfCAwMyIsImFkZCI6IjE2OC4xMzguNDMuNzUiLCJwb3J0Ijo4MCwiaWQiOiIxMWMzNjI3Zi0zMWU4LTQ2OTUtZGZiZC0zNDA3NmUyZjFmNWQiLCJhaWQiOjAsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiIiLCJwYXRoIjoiL2NjdHYxMy5tM3U4IiwiaG9zdCI6ImpwMDEuYTBhLnh5eiIsInNraXAtY2VydC12ZXJpZnkiOnRydWV9#JP | 03
+vless://ee2112e4-1e58-4f77-b162-5ef869358df9@168.110.45.41:23444?type=tcp&headerType=none&security=reality&encryption=none&sni=www.microsoft.com&fp=chrome&pbk=zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c&sid=119c9e68498f5900&flow=xtls-rprx-vision#JP | 04
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@152.69.200.216:443?fp=chrome&host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP | 05
