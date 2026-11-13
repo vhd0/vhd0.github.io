@@ -1,3 +1,3 @@
-ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@168.138.205.100:53758#JP | 01
-vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:12683?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#JP | 02
-vless://36c06e11-028b-40a1-a91f-c8f38f03e829@jp.yi-yi.xyz:8443?encryption=none&security=reality&pbk=g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY&sid=956d8072a694ff37&sni=www.cloudflare.com&fp=chrome&type=tcp&flow=xtls-rprx-vision#JP | 03
+ss://YWVzLTEyOC1nY206QndscWg3R2NGQg@168.138.205.100:53758#JP | 01
+vless://36c06e11-028b-40a1-a91f-c8f38f03e829@jp.yi-yi.xyz:8443?security=reality&encryption=none&pbk=g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=956d8072a694ff37#JP | 02
+vmess://eyJhZGQiOiIxNjguMTM4LjQzLjc1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJOb25lIiwiaWQiOiIxMWMzNjI3Zi0zMWU4LTQ2OTUtZGZiZC0zNDA3NmUyZjFmNWQiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ3cyIsInBhdGgiOiIvY2N0djEzLm0zdTgiLCJwY3MiOiIiLCJwb3J0IjoiODAiLCJwcyI6IkpQIHwgMDMiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIiwidmNuIjoiIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZX0#JP | 03
