@@ -1,4 +1,2 @@
 ss://YWVzLTEyOC1nY206QndscWg3R2NGQg@168.138.205.100:53758#JP | 01
 vless://516f305b-abb4-4e20-f70f-322ee3d7177d@43.133.167.153:443?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=r.bing.com&fp=chrome&flow=xtls-rprx-vision#JP | 02
-vless://7318caa1-93d1-4a9d-c481-504599902700@155.248.175.201:23169?sni=djj.zjlo.top&flow=xtls-rprx-vision&fp=firefox&security=tls#JP | 03
-vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@152.69.200.216:443?fp=chrome&host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP | 04
