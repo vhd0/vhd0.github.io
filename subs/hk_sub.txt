@@ -1,4 +1,4 @@
 trojan://12012@47.242.93.89:12012?allowInsecure=1&sni=ali-hk.b-gfw.cfd#HK | 01
 trojan://29086912-33e4-4e06-ba2b-60f1a195864f@tjyg.m2k699.com:24999?sni=www.itunes.com&allowInsecure=1&type=tcp#HK | 02
 trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@64.118.130.152:443?security=tls&sni=nb1hk.hikigo.com&type=tcp#HK | 03
-vless://93c0244e-6eb2-41bc-ad9c-1a7606747e13@156.245.234.97:2096/?type=tcp&encryption=none&flow=xtls-rprx-vision&security=tls&sni=lyhk.mihoyo.site&allowInsecure=1&fp=chrome&packetEncoding=xudp#HK | 04
+vmess://eyJ2IjoiMiIsInBzIjoiSEsgfCAwNCIsImFkZCI6InBkbXY0LnhpYW95YW4uaW8iLCJwb3J0IjoiMTY2MzIiLCJ0eXBlIjoibm9uZSIsImlkIjoiOTA0ZjA1NjktODY5NS00NjZmLTk3Y2YtMGRlMmZhY2UxYjQ2IiwiYWlkIjoiMCIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJob3N0IjoiZjkzMDljYzg4NjM3YzI2ZjU1MmExYTY0ZmIzMTFjYWUubW9iZ3NsYi50YmNhY2hlLmNvbSIsInRscyI6IiIsInNraXAtY2VydC12ZXJpZnkiOnRydWV9#HK | 04
