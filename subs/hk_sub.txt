@@ -1,2 +1,2 @@
-vmess://eyJ2IjoiMiIsInBzIjoiSEsgfCAwMSIsImFkZCI6IjQ3LjI0NC4xMjAuMTk3IiwicG9ydCI6NDQ4NjcsImFpZCI6MCwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJ0bHMiOiIiLCJpZCI6Ijg0NWU2YjA4LTI5MTktNDI5MC1hZGUwLTVkYzdkY2VhNTljYSIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsImhvc3QiOiI0Ny4yNDQuMTIwLjE5NyIsInBhdGgiOiIvYXJraSJ9#HK | 01
+trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@64.118.130.152:443?security=tls&sni=nb1hk.hikigo.com&type=tcp#HK | 01
 trojan://12012@47.242.93.89:12012?allowInsecure=1&sni=ali-hk.b-gfw.cfd#HK | 02
