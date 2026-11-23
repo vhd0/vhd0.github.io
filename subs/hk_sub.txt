@@ -1,2 +1,1 @@
 trojan://12012@47.242.93.89:12012?allowInsecure=1&sni=ali-hk.b-gfw.cfd#HK | 01
-vless://93c0244e-6eb2-41bc-ad9c-1a7606747e13@156.245.234.97:2096/?type=tcp&encryption=none&flow=xtls-rprx-vision&security=tls&sni=lyhk.mihoyo.site&allowInsecure=1&fp=chrome&packetEncoding=xudp#HK | 02
