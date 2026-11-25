@@ -1,1 +1,2 @@
-vless://4fc9dc3d-0d57-49e7-9bc0-e323165241bf@8.210.92.38:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=vhu6gifBQ8-hRzW1gqKFkEXDlQbf6Ex8kKj1FcxhmzA&sid=d78318845237d9a9&sni=www.ebay.com#HK | 01
+trojan://12012@47.242.93.89:12012?allowInsecure=1&sni=ali-hk.b-gfw.cfd#HK | 01
+vless://4fc9dc3d-0d57-49e7-9bc0-e323165241bf@8.210.92.38:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=vhu6gifBQ8-hRzW1gqKFkEXDlQbf6Ex8kKj1FcxhmzA&sid=d78318845237d9a9&sni=www.ebay.com#HK | 02
