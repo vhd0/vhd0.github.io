@@ -1,1 +1,2 @@
-vless://2e7bd251-52be-4ffa-b79e-108e1fe07185@116.213.43.43:11106?security=reality&alpn=h2,http/1.1&encryption=none&pbk=-13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=da12e31124830d42#HK | 01
+trojan://12012@47.242.93.89:12012?allowInsecure=1&sni=ali-hk.b-gfw.cfd#HK | 01
+vmess://eyJ2IjoiMiIsInBzIjoiSEsgfCAwMiIsImFkZCI6IjQ3Ljg2LjkwLjMxIiwicG9ydCI6NDQzLCJhaWQiOjAsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwidGxzIjoidGxzIiwiaWQiOiIyMzRhODA0MS0yYjRkLTQ0YTMtYThkOC01MjNjYmZkNThkYzQiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiJieXd4ZGhpcnFramo4eGF6LnYuM2Rucy52aXAiLCJob3N0IjoiYnl3eGRoaXJxa2pqOHhhei52LjNkbnMudmlwIiwicGF0aCI6Ii93cy12bWVzcyJ9#HK | 02
